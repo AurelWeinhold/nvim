@@ -18,6 +18,7 @@ packadd! vimball
 
 packadd! goyo.vim
 packadd! vim-fugitive
+packadd! vim-gutentags
 
 " Goyo
 function! s:goyo_enter()

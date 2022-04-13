@@ -5,6 +5,7 @@ This is my personalized neovim configuration.
 
 ## Requirements
 - git
+- ctags
 
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
@@ -18,6 +19,9 @@ unified layout in my buffers.
 - [Fugitive](https://github.com/tpope/vim-fugitive.git), a Git wrapper
 - [Goyo](https://github.com/junegunn/goyo.vim) for distraction-less writing
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
+- [Gutentags](https://github.com/ludovicchabant/vim-gutentags.git) for improved
+  tags support, like automatically incrementally (re)generating appropriate tag
+  files.
 
 ## Mappings
 - `<leader>` is the space key
