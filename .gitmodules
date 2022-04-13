@@ -19,3 +19,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/vimtex"]
 	path = .local/share/nvim/site/pack/functionality/opt/vimtex
 	url = https://github.com/lervag/vimtex.git
+[submodule ".local/share/nvim/site/pack/colors/opt/vim-devicons"]
+	path = .local/share/nvim/site/pack/colors/opt/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons

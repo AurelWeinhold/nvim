@@ -241,3 +241,9 @@ augroup filetypes
     autocmd BufNewFile,BufRead *.lds set filetype=asm " lds files are assembler
     autocmd BufNewFile,BufRead *.rasi set filetype=css " rasi files are css
 augroup END
+
+
+
+" NOTE(Aurel): This needs to be the last line in this file!
+packadd! vim-devicons
+set encoding=utf8

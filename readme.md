@@ -16,6 +16,8 @@ I've also set the sign and color column to be the background color, to have a
 unified layout in my buffers.
 
 ## Plugins
+- [Devicons](https://github.com/ryanoasis/vim-devicons) to add good looking
+  icons
 - [Fugitive](https://github.com/tpope/vim-fugitive.git), a Git wrapper
 - [Goyo](https://github.com/junegunn/goyo.vim) for distraction-less writing
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
