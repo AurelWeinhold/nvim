@@ -24,6 +24,7 @@ unified layout in my buffers.
 - [Gutentags](https://github.com/ludovicchabant/vim-gutentags.git) for improved
   tags support, like automatically incrementally (re)generating appropriate tag
   files.
+- [Lualine](https://github.com/nvim-lualine/lualine.nvim.git) as my statusline
 - [Signify](https://github.com/mhinz/vim-signify.git) adds vcs signs to
   signcoloumn
 - [Tabular](https://github.com/godlygeek/tabular.git) to align text like

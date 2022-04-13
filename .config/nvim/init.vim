@@ -22,6 +22,10 @@ packadd! vim-fugitive
 packadd! vim-gutentags
 packadd! vim-signify
 
+" Lualine
+packadd! lualine.nvim
+lua require('plugins/lualine')
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex
