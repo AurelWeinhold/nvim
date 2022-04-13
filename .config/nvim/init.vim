@@ -156,8 +156,15 @@ nnoremap <C-l> <C-W>l
 " enable syntax highlighting
 syntax on
 
+packadd! gruvbox-material
 set termguicolors
 set background=dark
+let g:gruvbox_material_italic=1
+let g:gruvbox_material_sign_column_background="bg0"
+let g:gruvbox_material_color_column_background="bg0"
+let g:gruvbox_material_background="hard"
+let g:gruvbox_material_palette="original"
+silent! colorscheme gruvbox-material
 
 " don't conceal anthing. Stop *bold* turning into bold in markdown files
 set conceallevel=0
