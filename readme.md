@@ -33,6 +33,8 @@ unified layout in my buffers.
   there is. See below how I set up my LaTeX workflow.
 - [Vimball](https://www.vim.org/scripts/script.php?script_id=1502) (built-in) to
   create, extract and list the contents of vimball archives
+- [snap](https://github.com/camspiers/snap.git) a fast finder system, I use for
+  file navigation.
 
 ## Noteworthy
 ### LaTeX

@@ -24,6 +24,10 @@ packadd! vimball
 packadd! lualine.nvim
 lua require('plugins/lualine')
 
+" snap
+packadd! snap
+lua require('plugins/snap')
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex
