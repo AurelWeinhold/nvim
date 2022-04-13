@@ -24,6 +24,8 @@ unified layout in my buffers.
   files.
 - [Signify](https://github.com/mhinz/vim-signify.git) adds vcs signs to
   signcoloumn
+- [Tabular](https://github.com/godlygeek/tabular.git) to align text like
+  markdown tables
 
 ## Mappings
 - `<leader>` is the space key

@@ -17,6 +17,7 @@ runtime macros/matchit.vim
 packadd! vimball
 
 packadd! goyo.vim
+packadd! tabular
 packadd! vim-fugitive
 packadd! vim-gutentags
 packadd! vim-signify
