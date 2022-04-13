@@ -69,8 +69,8 @@ set splitright
 set wrap linebreak nolist
 set textwidth=80
 
-" no spell checking by default
-set nospell
+" spell checking by default
+set spell
 set spelllang=de_de,en_us
 
 " visuals
