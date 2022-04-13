@@ -10,3 +10,6 @@ Using the original dark color scheme with a hard contrast.
 
 I've also set the sign and color column to be the background color, to have a
 unified layout in my buffers.
+
+## Additional configuration
+- small plugin to strip trailing whitespace
