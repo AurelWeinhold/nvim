@@ -11,6 +11,10 @@ Using the original dark color scheme with a hard contrast.
 I've also set the sign and color column to be the background color, to have a
 unified layout in my buffers.
 
+## Plugins
+- [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
+- [Goyo](https://github.com/junegunn/goyo.vim) for distraction-less writing
+
 ## Mappings
 - `<leader>` is the space key
 - small plugin to strip trailing whitespace on `<leader>x`
