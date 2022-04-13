@@ -139,7 +139,7 @@ nnoremap <silent> <leader>w :wa!<CR>
 " trim whitespace
 nnoremap <silent> <Leader>x :<C-U>call StripTrailingWhitespace()<CR>
 
-" map <Ctrl>c to copy to and <Ctrl>v to paste from system clipboard
+" quickly copy to system clipboard
 nnoremap <C-c> "+yy
 vnoremap <C-c> "+y
 
