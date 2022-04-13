@@ -28,3 +28,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/snap"]
 	path = .local/share/nvim/site/pack/functionality/opt/snap
 	url = https://github.com/camspiers/snap.git
+[submodule ".local/share/nvim/site/pack/functionality/opt/nvim-treesitter"]
+	path = .local/share/nvim/site/pack/functionality/opt/nvim-treesitter
+	url = https://github.com/nvim-treesitter/nvim-treesitter.git

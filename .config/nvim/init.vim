@@ -28,6 +28,10 @@ lua require('plugins/lualine')
 packadd! snap
 lua require('plugins/snap')
 
+" tree-sitter
+packadd! nvim-treesitter
+lua require('plugins/treesitter')
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex

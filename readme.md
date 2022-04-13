@@ -6,6 +6,8 @@ This is my personalized neovim configuration.
 ## Requirements
 - git
 - ctags
+- [fzf](https://github.com/junegunn/fzf.git)
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
 
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
@@ -35,6 +37,8 @@ unified layout in my buffers.
   create, extract and list the contents of vimball archives
 - [snap](https://github.com/camspiers/snap.git) a fast finder system, I use for
   file navigation.
+- [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter.git) for
+  tree-sitter support
 
 ## Noteworthy
 ### LaTeX
@@ -52,6 +56,12 @@ compiled document in my preferred pdf-viewer
 [Zathura](https://pwmt.org/projects/zathura/), also enabling forward search, and
 for its provided text objects to navigate the LaTeX structure better. Go check
 it out!
+
+### Tree-sitter
+[Tree-sitter](https://github.com/tree-sitter/tree-sitter.git) is a parser
+generator tool and an incremental parsing library. It allows you to do anything
+you want with the generated parsing tree, such as enhanced syntax highlighting
+but also refactoring into a function. Go check it out, it's awesome!
 
 ## Mappings
 - `<leader>` is the space key
