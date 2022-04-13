@@ -13,14 +13,12 @@ let &packpath = &runtimepath
 " Hit '%' on 'if' to jump to 'else'
 runtime macros/matchit.vim
 
-" add functionality to extract vimball files
-packadd! vimball
-
 packadd! goyo.vim
 packadd! tabular
 packadd! vim-fugitive
 packadd! vim-gutentags
 packadd! vim-signify
+packadd! vimball
 
 " Lualine
 packadd! lualine.nvim

@@ -31,6 +31,8 @@ unified layout in my buffers.
   markdown tables
 - [VimTeX](https://github.com/lervag/vimtex.git) for the best LaTeX experience
   there is. See below how I set up my LaTeX workflow.
+- [Vimball](https://www.vim.org/scripts/script.php?script_id=1502) (built-in) to
+  create, extract and list the contents of vimball archives
 
 ## Noteworthy
 ### LaTeX
