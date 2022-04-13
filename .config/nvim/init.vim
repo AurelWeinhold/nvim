@@ -17,6 +17,7 @@ runtime macros/matchit.vim
 packadd! vimball
 
 packadd! goyo.vim
+packadd! vim-fugitive
 
 " Goyo
 function! s:goyo_enter()

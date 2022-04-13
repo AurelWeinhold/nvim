@@ -3,6 +3,9 @@ My Neovim configuration
 
 This is my personalized neovim configuration.
 
+## Requirements
+- git
+
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
 
@@ -12,8 +15,9 @@ I've also set the sign and color column to be the background color, to have a
 unified layout in my buffers.
 
 ## Plugins
-- [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
+- [Fugitive](https://github.com/tpope/vim-fugitive.git), a Git wrapper
 - [Goyo](https://github.com/junegunn/goyo.vim) for distraction-less writing
+- [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
 
 ## Mappings
 - `<leader>` is the space key
