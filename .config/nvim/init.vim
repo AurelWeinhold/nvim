@@ -19,6 +19,7 @@ packadd! vimball
 packadd! goyo.vim
 packadd! vim-fugitive
 packadd! vim-gutentags
+packadd! vim-signify
 
 " Goyo
 function! s:goyo_enter()
@@ -46,6 +47,10 @@ augroup goyo_config
 augroup END
 
 let g:goyo_width=85
+
+" Signify
+" faster updatetime, as default is too slow
+set updatetime=100
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

@@ -10,3 +10,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/goyo.vim"]
 	path = .local/share/nvim/site/pack/functionality/opt/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
+[submodule ".local/share/nvim/site/pack/functionality/opt/vim-signify"]
+	path = .local/share/nvim/site/pack/functionality/opt/vim-signify
+	url = https://github.com/mhinz/vim-signify.git

@@ -22,6 +22,8 @@ unified layout in my buffers.
 - [Gutentags](https://github.com/ludovicchabant/vim-gutentags.git) for improved
   tags support, like automatically incrementally (re)generating appropriate tag
   files.
+- [Signify](https://github.com/mhinz/vim-signify.git) adds vcs signs to
+  signcoloumn
 
 ## Mappings
 - `<leader>` is the space key
