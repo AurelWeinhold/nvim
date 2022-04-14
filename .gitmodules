@@ -32,16 +32,16 @@
 	path = .local/share/nvim/site/pack/functionality/opt/nvim-treesitter
 	url = https://github.com/nvim-treesitter/nvim-treesitter.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/nvim-lspconfig"]
-	path = .local/share/nvim/site/pack/functionality/opt/nvim-lspconfig
+	path = .local/share/nvim/site/pack/lsp/opt/nvim-lspconfig
 	url = https://github.com/neovim/nvim-lspconfig.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/lspkind-nvim"]
-	path = .local/share/nvim/site/pack/functionality/opt/lspkind-nvim
+	path = .local/share/nvim/site/pack/lsp/opt/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/lsp-status.nvim"]
-	path = .local/share/nvim/site/pack/functionality/opt/lsp-status.nvim
+	path = .local/share/nvim/site/pack/lsp/opt/lsp-status.nvim
 	url = https://github.com/nvim-lua/lsp-status.nvim.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/nvim-jdtls"]
-	path = .local/share/nvim/site/pack/functionality/opt/nvim-jdtls
+	path = .local/share/nvim/site/pack/lsp/opt/nvim-jdtls
 	url = https://github.com/mfussenegger/nvim-jdtls.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/nvim-snippy"]
 	path = .local/share/nvim/site/pack/functionality/opt/nvim-snippy
