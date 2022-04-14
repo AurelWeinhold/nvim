@@ -170,6 +170,7 @@ snippy`)
 
 ## TODO
 - test installation steps
+- add update steps
 - configure statusline
 - unify jdtls and regular lsp config, or at least extract the mappings
 - work on the jdtls setup - do we need to specify a workspace?
