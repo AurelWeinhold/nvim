@@ -1,0 +1,10 @@
+#PREAMBLE
+# use package
+snippet upkg "\usepackage{}" b
+	\\usepackage{${1:package}}
+# new command
+snippet ncmd "\newcommand" b
+	\\newcommand$1{${2:name}}${3:[argc]}{${4:command}}
+# include
+snippet inc "\include" b
+	\\include{${1:file}}

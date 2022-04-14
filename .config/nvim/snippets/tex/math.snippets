@@ -1,0 +1,91 @@
+#math
+# fraction
+snippet frac "fraction" i
+    \\frac{${1:${VISUAL:1}}}{${2:2}}
+# function
+snippet func "\Fct{}{}" i
+	\\Fct{${1:${VISUAL:sin}}}{${2:x}}
+snippet fnc "\Fct{}{}" i
+	\\Fct{${1:${VISUAL:sin}}}{${2:x}}
+# set
+snippet set "\Set{}" i
+	\\Set{${1:${VISUAL}}}
+# absolute
+snippet abs "\Abs{}" i
+	\\Abs{${1:${VISUAL}}}
+# brace
+snippet brace "\Brace{}" i
+	\\Brace{${1:${VISUAL}}}
+# n choose k
+snippet choose "\binom{}{}" i
+	\\binom{${1:n}}{${2:k}}
+snippet binom "\binom{}{}" i
+	\\binom{${1:n}}{${2:k}}
+# bracket
+snippet brack "\Bracket{}" i
+	\\Bracket{${1:${VISUAL}}}
+# angle bracket
+snippet angle "\Angle{}" i
+	\\Angle{${1:${VISUAL}}}
+# vector
+snippet vec "\vec{}" i
+	\\vec{${1:${VISUAL:x}}}
+#
+# limit
+snippet lim "\lim\limits" i
+	\\lim\\limits_{${1:x}${2: \\to }${3:\\infty} ${4:${VISUAL:\\frac{1}{x\}}}}
+# integral
+snippet int "\int\limits" i
+	\\int\\limits_{${1:0}}^{${2:1}} ${3:${VISUAL:x^2}} \\mathrm{d}${4:x}
+#
+# greek letters
+snippet pi "\pi" w
+	\\pi
+#
+# trigonometric functions
+snippet sin "sin(x)" i
+	\\sin\\Brace{${1:${VISUAL:x}}}
+snippet cos "cos(x)" i
+	\\cos\\Brace{${1:${VISUAL:x}}}
+snippet tan "tan(x)" i
+	\\tan\\Brace{${1:${VISUAL:x}}}
+snippet cot "cot(x)" i
+	\\cot\\Brace{${1:${VISUAL:x}}}
+#
+snippet arcsin "arcsin(x)" i
+	\\arcsin\\Brace{${1:${VISUAL:x}}
+snippet arccos "arccos(x)" i
+	\\arccos\\Brace{${1:${VISUAL:x}}
+snippet arctan "arctan(x)" i
+	\\arctan\\Brace{${1:${VISUAL:x}}
+snippet arccot "arccot(x)" i
+	\\arccot\\Brace{${1:${VISUAL:x}}
+#
+snippet sinh "sinh(x)" i
+	\\sinh\\Brace{${1:${VISUAL:x}}}
+snippet cosh "cosh(x)" i
+	\\cosh\\Brace{${1:${VISUAL:x}}}
+snippet tanh "tanh(x)" i
+	\\tanh\\Brace{${1:${VISUAL:x}}}
+snippet coth "tanh(x)" i
+	\\coth\\Brace{${1:${VISUAL:x}}}
+#
+# functions
+snippet ln "ln(x)" i
+	\\Fct{ln}{${1:${VISUAL:x}}}
+#
+snippet max "max{x,y}" i
+	\\max\\Set{${1:${VISUAL:x,y}}}
+snippet min "min{x,y}" i
+	\\min\\Set{${1:${VISUAL:x,y}}}
+#
+snippet sum "\Sigma\limits" i
+	\\sum\\limits_{${1:0}}^{${2:1}} ${3:${VISUAL:x^2}}
+snippet prod "\Pi\limits" i
+	\\prod\\limits_{${1:0}}^{${2:1}} ${3:${VISUAL:x^2}}
+#
+# helper
+snippet ^ "^{}" i
+	^{${1:${VISUAL}}}
+snippet _ "_{}" i
+	_{${1:${VISUAL}}}
