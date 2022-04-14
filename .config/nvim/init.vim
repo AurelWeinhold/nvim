@@ -32,6 +32,12 @@ lua require('plugins/snap')
 packadd! nvim-treesitter
 lua require('plugins/treesitter')
 
+" LSP
+packadd! nvim-lspconfig
+packadd! lspkind-nvim
+packadd! lsp-status.nvim
+lua require('lsp/config')
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex

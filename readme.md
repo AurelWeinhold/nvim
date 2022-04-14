@@ -8,6 +8,17 @@ This is my personalized neovim configuration.
 - ctags
 - [fzf](https://github.com/junegunn/fzf.git)
 - [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
+- lsp-servers:
+    - [clangd](https://github.com/clangd/clangd) for C and C++
+    - [vimls](https://github.com/iamcco/vim-language-server) for VimL
+    - [texlab](https://github.com/latex-lsp/texlab) for LaTeX
+    - [bashls](https://github.com/bash-lsp/bash-language-server) for bash
+    - [cmake](https://github.com/regen100/cmake-language-server) for CMakeList
+      files
+    - [tsserver](https://github.com/Microsoft/TypeScript/wiki/Standalone-Server-%28tsserver%29)
+      for typescript
+- nodejs and npm as some of the servers are written in nodejs
+- python and pip for some of the servers
 
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
@@ -39,6 +50,12 @@ unified layout in my buffers.
   file navigation.
 - [tree-sitter](https://github.com/nvim-treesitter/nvim-treesitter.git) for
   tree-sitter support
+- [lspconfig](https://github.com/neovim/nvim-lspconfig.git) for simple
+  configuration of the built-in LSP client
+- [lspkind](https://github.com/onsails/lspkind-nvim) to add pictograms of the
+  type of completion item.
+- [lspstatus](https://github.com/nvim-lua/lsp-status.nvim.git) to generate
+  statusline components using the built-in LSP client.
 
 ## Noteworthy
 ### LaTeX
@@ -57,11 +74,20 @@ compiled document in my preferred pdf-viewer
 for its provided text objects to navigate the LaTeX structure better. Go check
 it out!
 
+I'm also trying out the texlab language server (see LSP).
+
 ### Tree-sitter
 [Tree-sitter](https://github.com/tree-sitter/tree-sitter.git) is a parser
 generator tool and an incremental parsing library. It allows you to do anything
 you want with the generated parsing tree, such as enhanced syntax highlighting
 but also refactoring into a function. Go check it out, it's awesome!
+
+### LSP
+The [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/)
+is used for communication between editors and language servers, which may
+provide a lot of functionality like auto complete items, go to definition, find
+all references and more. It's awesome and brings IDE-like code-editing to any
+texteditor supporting the protocol, as Neovim does. Go check it out!
 
 ## Mappings
 - `<leader>` is the space key
