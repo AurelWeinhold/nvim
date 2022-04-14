@@ -38,6 +38,14 @@ packadd! lspkind-nvim
 packadd! lsp-status.nvim
 lua require('lsp/config')
 
+" jdtls (java)
+packadd! nvim-jdtls
+augroup jdtls_lsp
+    autocmd!
+    autocmd FileType java lua require('lsp/servers/jdtls').setup()
+augroup end
+
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex

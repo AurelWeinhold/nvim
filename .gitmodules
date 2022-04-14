@@ -40,3 +40,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/lsp-status.nvim"]
 	path = .local/share/nvim/site/pack/functionality/opt/lsp-status.nvim
 	url = https://github.com/nvim-lua/lsp-status.nvim.git
+[submodule ".local/share/nvim/site/pack/functionality/opt/nvim-jdtls"]
+	path = .local/share/nvim/site/pack/functionality/opt/nvim-jdtls
+	url = https://github.com/mfussenegger/nvim-jdtls.git

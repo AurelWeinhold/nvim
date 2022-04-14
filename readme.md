@@ -3,6 +3,10 @@ My Neovim configuration
 
 This is my personalized neovim configuration.
 
+## TODO
+- unify jdtls and regular lsp config, or at least extract the mappings
+- work on the jdtls setup - do we need to specify a workspace?
+
 ## Requirements
 - git
 - ctags
@@ -17,6 +21,7 @@ This is my personalized neovim configuration.
       files
     - [tsserver](https://github.com/Microsoft/TypeScript/wiki/Standalone-Server-%28tsserver%29)
       for typescript
+    - [jdtls](https://github.com/eclipse/eclipse.jdt.ls.git) for java
 - nodejs and npm as some of the servers are written in nodejs
 - python and pip for some of the servers
 
@@ -56,6 +61,8 @@ unified layout in my buffers.
   type of completion item.
 - [lspstatus](https://github.com/nvim-lua/lsp-status.nvim.git) to generate
   statusline components using the built-in LSP client.
+- [jdtls](https://github.com/mfussenegger/nvim-jdtls.git) for supporting jdtls
+  for java which needs a little more than just the standard LSP-configuration.
 
 ## Noteworthy
 ### LaTeX
