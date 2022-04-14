@@ -4,12 +4,11 @@ My Neovim configuration
 This is my personalized neovim configuration.
 
 
-## Requirements
-- git
-- ctags
+## Dependencies
+- [ctags](https://github.com/universal-ctags/ctags)
 - [fzf](https://github.com/junegunn/fzf.git)
-- [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
-- lsp-servers:
+- [git](https://git-scm.com/)
+- LSP-servers:
     - [bashls](https://github.com/bash-lsp/bash-language-server) for bash
     - [clangd](https://github.com/clangd/clangd) for C and C++
     - [cmake](https://github.com/regen100/cmake-language-server) for CMakeList
@@ -19,8 +18,8 @@ This is my personalized neovim configuration.
     - [tsserver](https://github.com/Microsoft/TypeScript/wiki/Standalone-Server-%28tsserver%29)
       for typescript
     - [vimls](https://github.com/iamcco/vim-language-server) for VimL
-- nodejs and npm as some of the servers are written in nodejs
-- python and pip for some of the servers
+- [Neovim](https://neovim.io/) (>0.5)
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
 
 
 ## Colors
@@ -96,13 +95,13 @@ One might, for example, define a snippet
 \end{align*}
 ```
 (where `#` is the cursor position after inserting the snippet) which gets
-expanded on the key combination `align<Tab>`. This makes writing LaTeX and other
-code much faster as you can shorten everything that you type often down to a few
-keystrokes.
+expanded using the key combination `align<Tab>`. This makes writing LaTeX and
+other code much faster as you can shorten everything that you type often down to
+a few keystrokes.
 
-I highly recommend writing your own snippets as to not lose track of the
+**I highly recommend writing your own snippets as to not lose track of the
 snippets and to more easily remember what capabilities are implemented in your
-setup, but feel free to get inspired by mine.
+setup, but feel free to get inspired by mine.**
 
 ### LaTeX
 LaTeX writing can be cumbersome. This is my attempt to make it a lot better!
