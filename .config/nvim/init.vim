@@ -45,6 +45,9 @@ augroup jdtls_lsp
     autocmd FileType java lua require('lsp/servers/jdtls').setup()
 augroup end
 
+" snippy
+packadd! nvim-snippy
+lua require('plugins/snippy')
 
 " VimTeX
 packadd! vimtex

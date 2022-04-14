@@ -6,6 +6,7 @@ This is my personalized neovim configuration.
 ## TODO
 - unify jdtls and regular lsp config, or at least extract the mappings
 - work on the jdtls setup - do we need to specify a workspace?
+- replace vimtex with LSP?
 
 ## Requirements
 - git
@@ -63,12 +64,12 @@ unified layout in my buffers.
   statusline components using the built-in LSP client.
 - [jdtls](https://github.com/mfussenegger/nvim-jdtls.git) for supporting jdtls
   for java which needs a little more than just the standard LSP-configuration.
+- [snippy](https://github.com/dcampos/nvim-snippy.git) for snippets
 
 ## Noteworthy
 ### LaTeX
 LaTeX writing can be cumbersome. This is my attempt to make it a lot better!
 
-#### VimTeX
 VimTeX is the best plugin to write LaTeX in Vim that I have found to this day.
 It is highly configurable but adds very sane defaults, which I also mostly use
 (see `:help vimtex-default-mappings`).
@@ -81,7 +82,16 @@ compiled document in my preferred pdf-viewer
 for its provided text objects to navigate the LaTeX structure better. Go check
 it out!
 
-I'm also trying out the texlab language server (see LSP).
+I'm also trying out the texlab language server (see LSP), which might at one
+point replace vimtex.
+
+I also use snippets to write my LaTeX code. As I have written my documents I
+have incrementally added new snippets and updated existing ones the way I see
+fits me best. This has drastically increased speed and decreased resistance
+writing LaTeX documents! Feel free to check out my own snippets at
+`.config/nvim/snippets/tex/*` to get inspired and guide you in how to write your
+own snippets! Also, if you are using snippy, read the documentation (`:help
+snippy`)
 
 ### Tree-sitter
 [Tree-sitter](https://github.com/tree-sitter/tree-sitter.git) is a parser
@@ -95,6 +105,24 @@ is used for communication between editors and language servers, which may
 provide a lot of functionality like auto complete items, go to definition, find
 all references and more. It's awesome and brings IDE-like code-editing to any
 texteditor supporting the protocol, as Neovim does. Go check it out!
+
+### Snippets
+Snippets are small pieces of code that can be inserted using a key combination.
+One might, for example, define a snippet
+```latex
+\begin{align*}
+    #
+\end{align*}
+```
+(where `#` is the cursor position after inserting the snippet) which gets
+expanded on the key combination `align<Tab>`. This makes writing LaTeX and other
+code much faster as you can shorten everything that you type often down to a few
+keystrokes.
+
+I highly recommend writing your own snippets as to not lose track of the
+snippets and to more easily remember what capabilities are implemented in your
+setup, but feel free to get inspired by mine.
+
 
 ## Mappings
 - `<leader>` is the space key

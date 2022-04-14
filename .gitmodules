@@ -43,3 +43,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/nvim-jdtls"]
 	path = .local/share/nvim/site/pack/functionality/opt/nvim-jdtls
 	url = https://github.com/mfussenegger/nvim-jdtls.git
+[submodule ".local/share/nvim/site/pack/functionality/opt/nvim-snippy"]
+	path = .local/share/nvim/site/pack/functionality/opt/nvim-snippy
+	url = https://github.com/dcampos/nvim-snippy.git
