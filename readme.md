@@ -4,14 +4,6 @@ My Neovim configuration
 This is my personalized neovim configuration.
 
 
-## TODO
-- configure statusline
-- unify jdtls and regular lsp config, or at least extract the mappings
-- work on the jdtls setup - do we need to specify a workspace?
-- replace vimtex with LSP?
-- `<C-n/p>` not using cmp but built-in word completion
-
-
 ## Requirements
 - git
 - ctags
@@ -145,3 +137,11 @@ snippy`)
 - quicker saving on `<leader>w`
 - yanking to the system clipboard using `<C-c>` in normal and visual mode
 - quickly move between splits by replacing the `<C-W>` with just `<Ctl>`
+
+
+## TODO
+- configure statusline
+- unify jdtls and regular lsp config, or at least extract the mappings
+- work on the jdtls setup - do we need to specify a workspace?
+- replace vimtex with LSP?
+- `<C-n/p>` not using cmp but built-in word completion
