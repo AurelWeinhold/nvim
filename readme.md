@@ -102,6 +102,14 @@ unified layout in my buffers.
   there is. See below how I set up my LaTeX workflow.
 
 
+## Mappings
+- `<leader>` is mapped to the space key
+- small plugin to strip trailing whitespace on `<leader>x`
+- quicker saving on `<leader>w`
+- yanking to the system clipboard using `<C-c>` in normal and visual mode
+- quickly move between splits by replacing the `<C-W>` with just `<Ctl>`
+
+
 ## Noteworthy
 ### Tree-sitter
 [Tree-sitter](https://github.com/tree-sitter/tree-sitter.git) is a parser
@@ -158,14 +166,6 @@ writing LaTeX documents! Feel free to check out my own snippets at
 `.config/nvim/snippets/tex/*` to get inspired and guide you in how to write your
 own snippets! Also, if you are using snippy, read the documentation (`:help
 snippy`)
-
-
-## Mappings
-- `<leader>` is the space key
-- small plugin to strip trailing whitespace on `<leader>x`
-- quicker saving on `<leader>w`
-- yanking to the system clipboard using `<C-c>` in normal and visual mode
-- quickly move between splits by replacing the `<C-W>` with just `<Ctl>`
 
 
 ## TODO
