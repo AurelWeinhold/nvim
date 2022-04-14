@@ -49,6 +49,14 @@ augroup end
 packadd! nvim-snippy
 lua require('plugins/snippy')
 
+" cmp
+packadd! cmp-nvim-lsp
+packadd! cmp-snippy
+packadd! cmp-buffer
+packadd! cmp-path
+packadd! nvim-cmp
+lua require('plugins/cmp')
+
 " VimTeX
 packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex

@@ -7,6 +7,7 @@ This is my personalized neovim configuration.
 - unify jdtls and regular lsp config, or at least extract the mappings
 - work on the jdtls setup - do we need to specify a workspace?
 - replace vimtex with LSP?
+- `<C-n/p>` not using cmp but built-in word completion
 
 ## Requirements
 - git
@@ -65,6 +66,12 @@ unified layout in my buffers.
 - [jdtls](https://github.com/mfussenegger/nvim-jdtls.git) for supporting jdtls
   for java which needs a little more than just the standard LSP-configuration.
 - [snippy](https://github.com/dcampos/nvim-snippy.git) for snippets
+- [cmp](https://github.com/hrsh7th/nvim-cmp.git) for auto completion
+- completion sources
+    - [lsp](https://github.com/hrsh7th/cmp-nvim-lsp.git)
+    - [snippy](https://github.com/dcampos/cmp-snippy.git)
+    - [words in buffer](https://github.com/hrsh7th/cmp-buffer.git)
+    - [path](https://github.com/hrsh7th/cmp-path.git)
 
 ## Noteworthy
 ### LaTeX
