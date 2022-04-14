@@ -131,7 +131,7 @@ if !isdirectory($XDG_CACHE_HOME . "/nvim/undo")
 endif
 set undofile
 set undodir=$XDG_CACHE_HOME/nvim/undo//
-"
+
 if !isdirectory($XDG_CACHE_HOME . "/nvim/backup")
   call mkdir($XDG_CACHE_HOME . "/nvim/backup", "p")
 endif
@@ -140,7 +140,7 @@ set backupdir=$XDG_CACHE_HOME/nvim/backup//
 " don't back up these directories
 set backupskip^=/dev/shm/*
 set backupskip^=/var/tmp/*
-"
+
 set viminfo+=n$XDG_CACHE_HOME/nvim/viminfo
 set noswapfile
 set history=500
