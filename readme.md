@@ -43,12 +43,13 @@ chance to actually test.
    stow --dir=$HOME nvim
    ```
    from the directory in which you cloned this repo.
-4. Everything should be installed now so open Neovim and run
+4. Everything should be installed and at the right place now, so open Neovim and
+   run
    ```
    :helptags ALL
    ```
-   to generate the helptags. This will enable you to look through the help pages
-   of the plugins.
+   to generate the helptags (`:help helptags`). This will enable you to look
+   through the help pages of the plugins.
 
 
 ## Colors
