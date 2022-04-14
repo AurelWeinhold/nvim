@@ -22,6 +22,32 @@ This is my personalized neovim configuration.
 - [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
 
 
+## Installation
+NOTE: I have not tested these steps yet as I already have everything installed.
+This should work though, I'm pretty sure. I will remove this note once I had the
+chance to actually test.
+
+1. Clone this repo
+2. Pull the submodules by running
+   ```sh
+git submodule update --init --recursive
+   ```
+   this will install all plugins but not the dependencies.
+3. symlink or copy the files to their appropriate locations. All the files are
+   located relative to `$HOME`. The directory `.config/nvim` thus needs to go
+   to `$HOME/.config/nvim`.
+
+   You can do this manually or use [stow](https://www.gnu.org/software/stow/)
+   using
+   ```sh
+stow --dir=$HOME nvim
+   ```
+   from the directory in which you cloned this repo.
+4. Everything should be installed now so open Neovim and run `:helptags ALL` to
+   generate the helptags. This will enable you to look through the help pages of
+   the plugins.
+
+
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
 
@@ -139,6 +165,7 @@ snippy`)
 
 
 ## TODO
+- test installation steps
 - configure statusline
 - unify jdtls and regular lsp config, or at least extract the mappings
 - work on the jdtls setup - do we need to specify a workspace?
