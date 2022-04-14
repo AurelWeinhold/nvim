@@ -171,3 +171,4 @@ snippy`)
 - work on the jdtls setup - do we need to specify a workspace?
 - replace vimtex with LSP?
 - `<C-n/p>` not using cmp but built-in word completion
+- add LSP mappings to readme
