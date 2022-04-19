@@ -174,6 +174,9 @@ snippy`)
 - configure statusline
 - unify jdtls and regular lsp config, or at least extract the mappings
 - work on the jdtls setup - do we need to specify a workspace?
+    - fix workspace as it's currently generated as
+      `$HOME/Documents/workspace$PROJECTNAME` and not as directory under
+      `workspace/`
 - replace vimtex with LSP?
 - `<C-n/p>` not using cmp but built-in word completion
 - add LSP mappings to readme
