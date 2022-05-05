@@ -79,7 +79,7 @@ function M.setup()
 
     -- NOTE(Aurel): This unfortunately needs to exist, as the LS is built using
     -- one "workspace" where every project is located.
-    local workspace_folder = home .. "/Documents/workspace" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
+    local workspace_dir = home .. "/.cache/jdtls/" .. vim.fn.fnamemodify(root_dir, ":p:h:t")
     local config = {
         flags = {
             allow_incremental_sync = true,
