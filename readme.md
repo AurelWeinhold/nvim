@@ -179,3 +179,4 @@ snippy`)
       `workspace/`
 - replace vimtex with LSP?
 - add LSP mappings to readme
+- check out `:h fo-table`
