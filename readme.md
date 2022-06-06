@@ -51,6 +51,8 @@ chance to actually test.
    to generate the helptags (`:help helptags`). This will enable you to look
    through the help pages of the plugins.
 
+Before using neovim make sure you have set the environmental variable
+`$XDG_CACHE_HOME`.
 
 ## Colors
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
