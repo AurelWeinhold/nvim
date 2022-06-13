@@ -122,8 +122,10 @@ snippet enquote "enquote" w
 snippet	emph "emph" w
 	\\emph{${1:${VISUAL}}}
 # cite
+#snippet cite "cite" i
+#	~\\cite[$2]{${1:${VISUAL:citation}}}
 snippet cite "cite" i
-	~\\cite[$2]{${1:${VISUAL:citation}}}
+	~\\cite{${1:${VISUAL:citation}}}
 # todo
 snippet todo "todo comment" w
 	\\todo{${1:${VISUAL:todo}}}
