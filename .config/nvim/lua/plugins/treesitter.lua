@@ -3,7 +3,7 @@ require('nvim-treesitter.configs').setup {
     highlight = {
         enable = true,
         -- TODO: Remove as soon as this is supported by default.
-        -- NOTE: Makes spell checking work as expected y using vims built-in
+        -- NOTE: Makes spell checking work as expected by using vims built-in
         --       highlighting underneath the treesitter highlighting.
         additional_vim_regex_highlighting = true,
     },
