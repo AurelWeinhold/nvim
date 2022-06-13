@@ -1,5 +1,5 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { "c", "cpp", "latex" },
+    ensure_installed = { "c", "cpp", "latex", "java" },
     highlight = {
         enable = true,
         -- TODO: Remove as soon as this is supported by default.
