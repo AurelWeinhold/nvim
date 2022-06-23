@@ -4,7 +4,8 @@ local fzf = snap.get'consumer.fzf'
 local producer_file = snap.get'producer.ripgrep.file'.args({
     '--hidden',
     '--iglob', '!.git/*',
-    '--iglob', '!*.class'
+    '--iglob', '!*.class',
+    '--iglob', '!__pycache__',
 })
 local producer_grep = snap.get'producer.ripgrep.vimgrep'
 local preview_file = snap.get'preview.file'
