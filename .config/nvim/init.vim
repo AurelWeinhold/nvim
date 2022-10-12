@@ -265,8 +265,10 @@ nnoremap <C-l> <C-W>l
 " enable syntax highlighting
 syntax on
 
+if has('termguicolors')
+    set termguicolors
+endif
 packadd! gruvbox-material
-set termguicolors
 set background=dark
 let g:gruvbox_material_italic=1
 let g:gruvbox_material_sign_column_background="bg0"
