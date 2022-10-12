@@ -22,6 +22,7 @@ packadd! vim-fugitive
 packadd! vim-gutentags
 packadd! vim-signify
 packadd! vimball
+packadd! nvim-web-devicons
 
 " syntax highlighting for new languages
 packadd! yuck.vim
@@ -220,8 +221,9 @@ if has("autocmd")
                 \| exe "normal! g'\"" | endif
 endif
 
-" use unix as standard filetype
+" use unix as standard filetype and UTF-8
 set fileformats=unix,dos,mac
+set encoding=utf8
 
 " close vim if quickfix window is the only window and tab
 augroup QFClose
@@ -294,9 +296,3 @@ augroup filetypes
     autocmd BufNewFile,BufRead *.lds set filetype=asm " lds files are assembler
     autocmd BufNewFile,BufRead *.rasi set filetype=css " rasi files are css
 augroup END
-
-
-
-" NOTE(Aurel): This needs to be the last line in this file!
-packadd! vim-devicons
-set encoding=utf8

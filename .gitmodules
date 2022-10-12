@@ -19,9 +19,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/vimtex"]
 	path = .local/share/nvim/site/pack/functionality/opt/vimtex
 	url = https://github.com/lervag/vimtex.git
-[submodule ".local/share/nvim/site/pack/colors/opt/vim-devicons"]
-	path = .local/share/nvim/site/pack/colors/opt/vim-devicons
-	url = https://github.com/ryanoasis/vim-devicons
 [submodule ".local/share/nvim/site/pack/colors/opt/lualine.nvim"]
 	path = .local/share/nvim/site/pack/colors/opt/lualine.nvim
 	url = https://github.com/nvim-lualine/lualine.nvim.git
@@ -70,3 +67,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/telescope-fzf-native.nvim"]
 	path = .local/share/nvim/site/pack/functionality/opt/telescope-fzf-native.nvim
 	url = https://github.com/nvim-telescope/telescope-fzf-native.nvim.git
+[submodule ".local/share/nvim/site/pack/colors/opt/nvim-web-devicons"]
+	path = .local/share/nvim/site/pack/colors/opt/nvim-web-devicons
+	url = https://github.com/nvim-tree/nvim-web-devicons.git
