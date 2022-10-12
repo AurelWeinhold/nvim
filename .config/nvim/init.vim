@@ -215,6 +215,9 @@ set novisualbell
 set t_vb=
 set timeoutlen=500
 
+" disable mouse
+set mouse=
+
 " return to last edit position when opening files
 if has("autocmd")
     au BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$")
