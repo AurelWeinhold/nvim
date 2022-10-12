@@ -264,6 +264,17 @@ let g:gruvbox_material_sign_column_background="bg0"
 let g:gruvbox_material_color_column_background="bg0"
 let g:gruvbox_material_background="hard"
 let g:gruvbox_material_palette="original"
+
+" highlight functions blue
+" see `:help gruvbox-material-faq`
+function! s:gruvbox_material_custom() abort
+    highlight! link TSFunction Blue
+endfunction
+augroup GruvboxMaterialCustom
+    autocmd!
+    autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
+augroup END
+
 silent! colorscheme gruvbox-material
 
 " don't conceal anthing. Stop *bold* turning into bold in markdown files

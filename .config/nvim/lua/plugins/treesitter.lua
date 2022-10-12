@@ -5,12 +5,6 @@ require('nvim-treesitter.configs').setup {
     incremental_selection = { enable = true }
 }
 
--- colors
-require('nvim-treesitter.highlight')
-local hlmap = vim.treesitter.highlighter.hl_map
-hlmap["method"] = "blue"
-hlmap["function"] = "blue"
-
 -- parsers
 local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
 parser_config.c.filetype_to_parsername = "c.doxygen"
