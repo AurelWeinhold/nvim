@@ -288,7 +288,7 @@ augroup END
 
 silent! colorscheme gruvbox-material
 
-" don't conceal anthing. Stop *bold* turning into bold in markdown files
+" don't conceal anything. Stop *bold* turning into bold in markdown files
 set conceallevel=0
 
 
