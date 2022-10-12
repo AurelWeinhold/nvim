@@ -1,7 +1,5 @@
 local nvim_lsp = require('lspconfig')
-local lspkind = require('lspkind')
 
-lspkind.init()
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
