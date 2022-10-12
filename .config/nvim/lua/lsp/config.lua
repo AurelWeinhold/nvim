@@ -1,9 +1,7 @@
 local nvim_lsp = require('lspconfig')
 local lspkind = require('lspkind')
-local lsp_status = require('lsp-status')
 
 lspkind.init()
-lsp_status.register_progress()
 
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
@@ -26,8 +24,6 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<leader>q', '<cmd>lua vim.diagnostic.setloclist()<CR>', opts)
-
-  lsp_status.on_attach(client)
 end
 
 -- Use a loop to conveniently setup defined servers, map buffer local
@@ -36,16 +32,12 @@ local servers = { "vimls", "texlab", "bashls", "cmake", "tsserver" }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
-        capabilities = vim.tbl_extend('keep', capabilities or {},
-                                      lsp_status.capabilities),
     }
 end
 
 require('clangd_extensions').setup {
 	server = {
         on_attach = on_attach,
-        capabilities = vim.tbl_extend('keep', capabilities or {},
-                                      lsp_status.capabilities),
 	},
 	extensions = {
 		inlay_hints = {

@@ -31,9 +31,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/lspkind-nvim"]
 	path = .local/share/nvim/site/pack/lsp/opt/lspkind-nvim
 	url = https://github.com/onsails/lspkind-nvim.git
-[submodule ".local/share/nvim/site/pack/functionality/opt/lsp-status.nvim"]
-	path = .local/share/nvim/site/pack/lsp/opt/lsp-status.nvim
-	url = https://github.com/nvim-lua/lsp-status.nvim.git
 [submodule ".local/share/nvim/site/pack/functionality/opt/nvim-jdtls"]
 	path = .local/share/nvim/site/pack/lsp/opt/nvim-jdtls
 	url = https://github.com/mfussenegger/nvim-jdtls.git
@@ -73,3 +70,6 @@
 [submodule ".local/share/nvim/site/pack/lsp/opt/clangd_extensions.nvim"]
 	path = .local/share/nvim/site/pack/lsp/opt/clangd_extensions.nvim
 	url = https://github.com/p00f/clangd_extensions.nvim.git
+[submodule ".local/share/nvim/site/pack/lsp/opt/null-ls.nvim"]
+	path = .local/share/nvim/site/pack/lsp/opt/null-ls.nvim
+	url = https://github.com/jose-elias-alvarez/null-ls.nvim.git

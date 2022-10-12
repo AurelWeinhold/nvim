@@ -43,7 +43,6 @@ lua require('plugins/treesitter')
 " LSP
 packadd! nvim-lspconfig
 packadd! lspkind-nvim
-packadd! lsp-status.nvim
 packadd! clangd_extensions.nvim
 lua require('lsp/config')
 
