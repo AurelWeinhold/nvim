@@ -81,6 +81,20 @@ snippet fig "Figure environment" b
     	\\caption{${4/(\\w+)\\.\\w+/\\u$1/}$5%
     	\\label{fig:${4/(\\w+)\\.\\w+/$1/}}}%
 	\\end{figure}
+snippet img "Figure environment" b
+	\\begin{figure}[${2:htpb}]
+		\\centering
+		\\includegraphics[width=${3:0.8}\\linewidth]{${4:name.ext}}
+		\\caption{${4/(\\w+)\\.\\w+/\\u$1/}$5%
+		\\label{fig:${4/(\\w+)\\.\\w+/$1/}}}%
+	\\end{figure}
+snippet image "Figure environment" b
+	\\begin{figure}[${2:htpb}]
+		\\centering
+		\\includegraphics[width=${3:0.8}\\linewidth]{${4:name.ext}}
+		\\caption{${4/(\\w+)\\.\\w+/\\u$1/}$5%
+		\\label{fig:${4/(\\w+)\\.\\w+/$1/}}}%
+	\\end{figure}
 # section
 snippet secn "section" b
 	\\section{${1:${VISUAL}}}
