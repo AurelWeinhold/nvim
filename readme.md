@@ -178,6 +178,7 @@ snippy`)
 
 
 ## TODO
+- make java jdtls work again.
 - test installation steps
 - add update steps
 - configure statusline
