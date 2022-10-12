@@ -1,12 +1,6 @@
 require('nvim-treesitter.configs').setup {
     ensure_installed = { "c", "cpp", "latex", "java" },
-    highlight = {
-        enable = true,
-        -- TODO: Remove as soon as this is supported by default.
-        -- NOTE: Makes spell checking work as expected by using vims built-in
-        --       highlighting underneath the treesitter highlighting.
-        additional_vim_regex_highlighting = true,
-    },
+    highlight = { enable = true },
     indent = { enable = false },
     incremental_selection = { enable = true }
 }
