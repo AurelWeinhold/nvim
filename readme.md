@@ -33,7 +33,14 @@ chance to actually test.
    git submodule update --init --recursive
    ```
    this will install all plugins but not the dependencies.
-3. symlink or copy the files to their appropriate locations. All the files are
+3. In `.local/share/nvim/site/pack/functionality/opt/telescope-fzf-native.nvim/`
+   compile `telescope-fzf-native.nvim` by running
+   ```
+   cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release
+   cmake --build build --config Release
+   cmake --install build --prefix build
+   ```
+4. symlink or copy the files to their appropriate locations. All the files are
    located relative to `$HOME`. The directory `.config/nvim` thus needs to go to
    `$HOME/.config/nvim`.
 
@@ -43,7 +50,7 @@ chance to actually test.
    stow --target=$HOME nvim
    ```
    from the directory in which you cloned this repo.
-4. Everything should be installed and at the right place now, so open Neovim and
+5. Everything should be installed and at the right place now, so open Neovim and
    run
    ```
    :helptags ALL

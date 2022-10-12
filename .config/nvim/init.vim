@@ -13,6 +13,9 @@ let &packpath = &runtimepath
 " Hit '%' on 'if' to jump to 'else'
 runtime macros/matchit.vim
 
+" libraries
+packadd! plenary.nvim
+
 packadd! goyo.vim
 packadd! tabular
 packadd! vim-fugitive
@@ -27,9 +30,10 @@ packadd! yuck.vim
 packadd! lualine.nvim
 lua require('plugins/lualine')
 
-" snap
-packadd! snap
-lua require('plugins/snap')
+" telescope
+packadd! telescope.nvim
+packadd! telescope-fzf-native.nvim
+lua require('plugins/telescope')
 
 " tree-sitter
 packadd! nvim-treesitter
