@@ -32,7 +32,7 @@ end
 
 -- Use a loop to conveniently setup defined servers, map buffer local
 -- keybindings when the language server attaches and lsp_status capabilities
-local servers = { "clangd", "vimls", "texlab", "bashls", "cmake", "tsserver" }
+local servers = { "vimls", "texlab", "bashls", "cmake", "tsserver" }
 for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
         on_attach = on_attach,
@@ -41,5 +41,19 @@ for _, lsp in ipairs(servers) do
     }
 end
 
--- Server specific config
-require('lsp/servers/clangd')
+require('clangd_extensions').setup {
+	server = {
+        on_attach = on_attach,
+        capabilities = vim.tbl_extend('keep', capabilities or {},
+                                      lsp_status.capabilities),
+	},
+	extensions = {
+		inlay_hints = {
+			only_current_line = true,
+			parameter_hints_prefix = "",
+			max_len_align = true,
+			right_align = true,
+		}
+	},
+}
+

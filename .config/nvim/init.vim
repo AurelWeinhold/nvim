@@ -44,6 +44,7 @@ lua require('plugins/treesitter')
 packadd! nvim-lspconfig
 packadd! lspkind-nvim
 packadd! lsp-status.nvim
+packadd! clangd_extensions.nvim
 lua require('lsp/config')
 
 " jdtls (java)
