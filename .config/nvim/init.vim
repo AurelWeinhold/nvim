@@ -20,6 +20,9 @@ packadd! vim-gutentags
 packadd! vim-signify
 packadd! vimball
 
+" syntax highlighting for new languages
+packadd! yuck.vim
+
 " Lualine
 packadd! lualine.nvim
 lua require('plugins/lualine')
