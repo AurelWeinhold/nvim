@@ -1,29 +1,29 @@
 require('telescope').setup{
-    defaults = {
-        mappings = {
-            i = {
-                ["<esc>"] = require("telescope.actions").close
-            }
-        },
-    },
-    pickers = {
-        find_files = {
+	defaults = {
+		mappings = {
+			i = {
+				["<esc>"] = require("telescope.actions").close
+			}
+		},
+	},
+	pickers = {
+		find_files = {
 			find_command = {
 				"rg", "--files",
 				"--hidden",
 				"--iglob", "!.git/*",
 				"--iglob", "!.git",
 			},
-        }
-    },
-    extensions = {
-        fzf = {
-            fuzzy = true,
-            override_generic_sorter = true,
-            override_file_sorter = true,
-            case_mode = "smart_case",
-        }
-    }
+		}
+	},
+	extensions = {
+		fzf = {
+			fuzzy = true,
+			override_generic_sorter = true,
+			override_file_sorter = true,
+			case_mode = "smart_case",
+		}
+	}
 }
 
 -- extensions

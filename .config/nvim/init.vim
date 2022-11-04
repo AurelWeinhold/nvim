@@ -50,8 +50,8 @@ lua require('lsp/config')
 " jdtls (java)
 packadd! nvim-jdtls
 augroup jdtls_lsp
-    autocmd!
-    autocmd FileType java lua require('lsp/servers/jdtls').setup()
+	autocmd!
+	autocmd FileType java lua require('lsp/servers/jdtls').setup()
 augroup end
 
 " snippy
@@ -72,45 +72,45 @@ let g:tex_flavor = "latex" " set default tex flavour to latex
 let g:vimtex_compiler_progname = 'nvr'
 
 let g:vimtex_compiler_latexmk = {
-    \ 'build_dir' : 'build',
-    \ 'callback' : 1,
-    \ 'continuous' : 1,
-    \ 'executable' : 'latexmk',
-    \ 'hooks' : [],
-    \ 'options' : [
-    \   '-verbose',
-    \   '-file-line-error',
-    \   '-synctex=1',
-    \   '-interaction=nonstopmode',
-    \   '-shell-escape',
-    \   '-enable-write18',
-    \ ],
-    \}
+	\ 'build_dir' : 'build',
+	\ 'callback' : 1,
+	\ 'continuous' : 1,
+	\ 'executable' : 'latexmk',
+	\ 'hooks' : [],
+	\ 'options' : [
+	\   '-verbose',
+	\   '-file-line-error',
+	\   '-synctex=1',
+	\   '-interaction=nonstopmode',
+	\   '-shell-escape',
+	\   '-enable-write18',
+	\ ],
+	\}
 let g:vimtex_context_pdf_viewer='zathura'
 
 " Goyo
 function! s:goyo_enter()
-    let b:quitting = 0
-    let b:quitting_bang = 0
-    autocmd QuitPre <buffer> let b:quitting = 1
-    cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
+	let b:quitting = 0
+	let b:quitting_bang = 0
+	autocmd QuitPre <buffer> let b:quitting = 1
+	cabbrev <buffer> q! let b:quitting_bang = 1 <bar> q!
 endfunction
 
 function! s:goyo_leave()
-    " Quit vim if this is the only remaining buffer
-    if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
-        if b:quitting_bang
-            qa!
-        else
-            qa
-        endif
-    endif
+	" Quit vim if this is the only remaining buffer
+	if b:quitting && len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) == 1
+		if b:quitting_bang
+			qa!
+		else
+			qa
+		endif
+	endif
 endfunction
 
 augroup goyo_config
-    autocmd!
-    autocmd User GoyoEnter call <SID>goyo_enter()
-    autocmd User GoyoLeave call <SID>goyo_leave()
+	autocmd!
+	autocmd User GoyoEnter call <SID>goyo_enter()
+	autocmd User GoyoLeave call <SID>goyo_leave()
 augroup END
 
 let g:goyo_width=85
@@ -190,9 +190,9 @@ set completeopt-=preview
 " ignore some files
 set wildignore=*.o,*~,*.pyc,*.d
 if has("win16") || has("win32")
-    set wildignore+=.git\*,.hg\*,.svn\*
+	set wildignore+=.git\*,.hg\*,.svn\*
 else
-    set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
+	set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 endif
 " set the cursor to not blink
 set guicursor+=n-v-c:blinkon0
@@ -221,8 +221,8 @@ set mouse=
 
 " return to last edit position when opening files
 if has("autocmd")
-    au BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$")
-                \| exe "normal! g'\"" | endif
+	au BufReadPost * if line("'\"") > 0 && line ("'\"") <= line("$")
+				\| exe "normal! g'\"" | endif
 endif
 
 " use unix as standard filetype and UTF-8
@@ -231,8 +231,8 @@ set encoding=utf8
 
 " close vim if quickfix window is the only window and tab
 augroup QFClose
-    autocmd!
-    autocmd WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
+	autocmd!
+	autocmd WinEnter * if winnr('$') == 1 && &buftype == "quickfix"|q|endif
 augroup END
 
 
@@ -267,7 +267,7 @@ nnoremap <C-l> <C-W>l
 syntax on
 
 if has('termguicolors')
-    set termguicolors
+	set termguicolors
 endif
 packadd! gruvbox-material
 set background=dark
@@ -278,11 +278,11 @@ let g:gruvbox_material_palette="original"
 " highlight functions blue
 " see `:help gruvbox-material-faq`
 function! s:gruvbox_material_custom() abort
-    highlight! link TSFunction Blue
+	highlight! link TSFunction Blue
 endfunction
 augroup GruvboxMaterialCustom
-    autocmd!
-    autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
+	autocmd!
+	autocmd ColorScheme gruvbox-material call s:gruvbox_material_custom()
 augroup END
 
 silent! colorscheme gruvbox-material
@@ -296,7 +296,7 @@ set conceallevel=0
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 augroup filetypes
-    autocmd!
-    autocmd BufNewFile,BufRead *.lds set filetype=asm " lds files are assembler
-    autocmd BufNewFile,BufRead *.rasi set filetype=css " rasi files are css
+	autocmd!
+	autocmd BufNewFile,BufRead *.lds set filetype=asm " lds files are assembler
+	autocmd BufNewFile,BufRead *.rasi set filetype=css " rasi files are css
 augroup END

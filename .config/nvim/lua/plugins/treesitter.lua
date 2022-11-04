@@ -1,8 +1,8 @@
 require('nvim-treesitter.configs').setup {
-    ensure_installed = { "c", "cpp", "latex", "java" },
-    highlight = { enable = true },
-    indent = { enable = false },
-    incremental_selection = { enable = true }
+	ensure_installed = { "c", "cpp", "latex", "java" },
+	highlight = { enable = true },
+	indent = { enable = false },
+	incremental_selection = { enable = true }
 }
 
 -- parsers

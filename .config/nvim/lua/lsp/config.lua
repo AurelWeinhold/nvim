@@ -27,14 +27,14 @@ end
 -- loop over servers, that don't require special configuration
 local servers = { "vimls", "texlab", "bashls", "cmake", "tsserver" }
 for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-        on_attach = on_attach,
-    }
+	nvim_lsp[lsp].setup {
+		on_attach = on_attach,
+	}
 end
 
 require('clangd_extensions').setup {
 	server = {
-        on_attach = on_attach,
+		on_attach = on_attach,
 	},
 	extensions = {
 		inlay_hints = {

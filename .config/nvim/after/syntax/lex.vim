@@ -19,16 +19,16 @@ endif
 " Read the C/C++ syntax to start with
 if version >= 600
   if exists("lex_uses_cpp")
-    runtime! syntax/cpp.vim
+	runtime! syntax/cpp.vim
   else
-    runtime! syntax/c.vim
+	runtime! syntax/c.vim
   endif
   unlet b:current_syntax
 else
   if exists("lex_uses_cpp")
-    so <sfile>:p:h/cpp.vim
+	so <sfile>:p:h/cpp.vim
   else
-    so <sfile>:p:h/c.vim
+	so <sfile>:p:h/c.vim
   endif
 endif
 

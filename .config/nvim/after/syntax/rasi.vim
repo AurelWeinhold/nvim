@@ -1,18 +1,18 @@
 " Vim syntax file
-" Language:     Rasi (based on css)
+" Language:	 Rasi (based on css)
 " Previous Contributor List:
-"               Claudio Fleiner <claudio@fleiner.com> (Maintainer)
-"               Yeti            (Add full CSS2, HTML4 support)
-"               Nikolai Weibull (Add CSS2 support)
-" Maintainer:   Jules Wang      <w.jq0722@gmail.com>
-" URL:          https://github.com/JulesWang/css.vim
+"			   Claudio Fleiner <claudio@fleiner.com> (Maintainer)
+"			   Yeti			(Add full CSS2, HTML4 support)
+"			   Nikolai Weibull (Add CSS2 support)
+" Maintainer:   Jules Wang	  <w.jq0722@gmail.com>
+" URL:		  https://github.com/JulesWang/css.vim
 " Last Change:  2017 Jan 14
 "  		cssClassName updated by Ryuichi Hayashida Jan 2016
 
 " quit when a syntax file was already loaded
 if !exists("main_syntax")
   if exists("b:current_syntax")
-    finish
+	finish
   endif
   let main_syntax = 'css'
 elseif exists("b:current_syntax") && b:current_syntax == "css"
@@ -108,7 +108,7 @@ syn region cssKeyFrameWrap contained transparent matchgroup=cssBraces start="{" 
 syn match cssKeyFrameSelector /\(\d*%\|from\|to\)\=/  contained skipwhite skipnl nextgroup=cssDefinition
 
 " @import
-syn region cssInclude start=/@import\>/    end=/\ze;/ transparent contains=cssStringQ,cssStringQQ,cssUnicodeEscape,cssComment,cssIncludeKeyword,cssURL,cssMediaProp,cssValueLength,cssMediaKeyword,cssValueInteger,cssMediaAttr,cssVendor,cssMediaType
+syn region cssInclude start=/@import\>/	end=/\ze;/ transparent contains=cssStringQ,cssStringQQ,cssUnicodeEscape,cssComment,cssIncludeKeyword,cssURL,cssMediaProp,cssValueLength,cssMediaKeyword,cssValueInteger,cssMediaAttr,cssVendor,cssMediaType
 syn region cssInclude start=/@charset\>/   end=/\ze;/ transparent contains=cssStringQ,cssStringQQ,cssUnicodeEscape,cssComment,cssIncludeKeyword
 syn region cssInclude start=/@namespace\>/ end=/\ze;/ transparent contains=cssStringQ,cssStringQQ,cssUnicodeEscape,cssComment,cssIncludeKeyword
 
