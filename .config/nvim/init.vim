@@ -40,6 +40,10 @@ lua require('plugins/telescope')
 packadd! nvim-treesitter
 lua require('plugins/treesitter')
 
+" NOTE(Aurel): This one cmp source is needed in the lsp config as well and needs
+" to be loaded beforehand!
+packadd! cmp-nvim-lsp
+
 " LSP
 packadd! nvim-lspconfig
 packadd! null-ls.nvim
@@ -59,7 +63,6 @@ packadd! nvim-snippy
 lua require('plugins/snippy')
 
 " cmp
-packadd! cmp-nvim-lsp
 packadd! cmp-snippy
 packadd! cmp-buffer
 packadd! cmp-path

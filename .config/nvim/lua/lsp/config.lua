@@ -29,17 +29,23 @@ local on_attach = function(client, bufnr)
   }) end, bufopts)
 end
 
+-- support LSP snippets
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+
 -- loop over servers, that don't require special configuration
 local servers = { "vimls", "texlab", "bashls", "cmake", "tsserver" }
 for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
+		capabilities = capabilities,
 	}
 end
 
 require('clangd_extensions').setup {
 	server = {
 		on_attach = on_attach,
+		capabilities = capabilities,
 	},
 	extensions = {
 		inlay_hints = {
