@@ -1,10 +1,10 @@
 " show linenumbers
 setlocal nonumber
 
-" show the signcolumn on the left
+" don't show the signcolumn on the left
 setlocal signcolumn=no
 
-" make the signcolumn 1 column wider
+" make the signcolumn 0 columns wide
 setlocal foldcolumn=0
 
 " mark 110th character
