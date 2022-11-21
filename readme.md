@@ -178,6 +178,8 @@ snippy`)
 
 
 ## TODO
+- add LanguageTool support
+	- possibly with yalafi integration to strip away latex
 - make java jdtls work again.
 - test installation steps
 - add update steps
