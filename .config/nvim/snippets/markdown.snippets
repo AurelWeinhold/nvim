@@ -3,9 +3,9 @@ snippet latex "LaTeX" w
 	LaTeX
 #
 snippet ic "inline code" w
-	\`$1\`
+	\`${1:${VISUAL}}\`
 #
 snippet code "code block" b
 	\`\`\`$1
-	$2
+	${2:${VISUAL}}
 	\`\`\`
