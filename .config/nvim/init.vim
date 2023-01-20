@@ -63,6 +63,7 @@ packadd! nvim-snippy
 lua require('plugins/snippy')
 
 " cmp
+packadd! cmp-omni
 packadd! cmp-snippy
 packadd! cmp-buffer
 packadd! cmp-path

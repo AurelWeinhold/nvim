@@ -7,6 +7,7 @@ cmp.setup({
 		{ name = 'buffer' },
 		{ name = 'path' },
 		{ name = 'snippy' },
+		{ name = 'omni' },
 	}),
 	mapping = {
 		['<C-p>'] = cmp.mapping.select_prev_item(),
