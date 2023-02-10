@@ -11,6 +11,7 @@ require('telescope').setup{
 			find_command = {
 				"rg", "--files",
 				"--hidden",
+				"--follow",
 				"--iglob", "!.git/*",
 				"--iglob", "!.git",
 			},
