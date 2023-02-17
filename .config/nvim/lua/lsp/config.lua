@@ -62,6 +62,28 @@ require('clangd_extensions').setup {
 local null_ls = require('null-ls')
 null_ls.setup {
 	sources = {
+		-- diagnostic
+		--null_ls.builtins.diagnostics.todo_comments, -- diagnostic warnings at todos
+		--null_ls.builtins.diagnostics.ltrs.with({
+		--	extra_filetypes = { "latex" },
+		--	args = {
+		--		"--hostname", "http://localhost", "-p", "8081",
+		--		"check", "-m", "-r", "--text", "$TEXT"
+		--	},
+		--}),
+		--null_ls.builtins.diagnostics.vale.with({ -- prose linter
+		--	extra_filetypes = { "latex" },
+		--}),
+		-- formatting
 		null_ls.builtins.formatting.clang_format, -- formatting using clang_format
+		null_ls.builtins.formatting.trim_newlines, -- remove trailing new lines
+		-- code actions
+		--null_ls.builtins.code_actions.ltrs.with({
+		--	extra_filetypes = { "latex" },
+		--	args = {
+		--		"--hostname", "http://localhost", "-p", "8081",
+		--		"check", "-m", "-r", "--text", "$TEXT"
+		--	},
+		--}),
 	},
 }
