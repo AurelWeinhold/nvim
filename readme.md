@@ -180,6 +180,7 @@ snippy`)
 ## TODO
 - add LanguageTool support
 	- possibly with yalafi integration to strip away latex
+	- vimtex: vlty
 - make java jdtls work again.
 - test installation steps
 - add update steps
