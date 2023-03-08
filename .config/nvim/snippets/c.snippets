@@ -94,12 +94,12 @@ snippet func "function stub" b
 	}
 #
 snippet struct "new struct" b
-	typedef struct ${1:foo_t} {
+	struct ${1:foo_t} {
 		${2:variables}
-	}$3;
+	};
 #
 snippet enum "new enum" b
-	typedef enum {${1:items}}$2;
+	enum ${1:foo_e} {${2:items}};
 #
 snippet print "simple print statement" b
 	printf("$1"$2);
