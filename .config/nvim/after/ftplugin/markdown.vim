@@ -1,4 +1,4 @@
-" show linenumbers
+" don't show line numbers
 setlocal nonumber norelativenumber
 
 " don't show the signcolumn on the left
