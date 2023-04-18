@@ -1,6 +1,6 @@
 require("obsidian").setup({
 	dir = "~/Documents/secondBrain",
-	notes_subdir = "notes",
+	notes_subdir = "to_sort",
 	daily_notes = {
 		folder = "notes/dailies",
 	},
