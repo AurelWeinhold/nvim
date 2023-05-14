@@ -1,5 +1,5 @@
 require('nvim-treesitter.configs').setup {
-	ensure_installed = { "c", "cpp", "latex", "java" },
+	ensure_installed = { "c", "cpp", "latex", "java", "markdown", "python" },
 	highlight = { enable = true },
 	indent = { enable = false },
 	incremental_selection = { enable = true },
