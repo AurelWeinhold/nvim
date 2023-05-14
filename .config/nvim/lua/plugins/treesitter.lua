@@ -1,6 +1,10 @@
 require('nvim-treesitter.configs').setup {
 	ensure_installed = { "c", "cpp", "latex", "java", "markdown", "python" },
-	highlight = { enable = true },
+	highlight = {
+		enable = true,
+		-- for obsidian only:
+		additional_vim_regex_highlighting = {"markdown"},
+	},
 	indent = { enable = false },
 	incremental_selection = { enable = true },
 	keymaps = {
