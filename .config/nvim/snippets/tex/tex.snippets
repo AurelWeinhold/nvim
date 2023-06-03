@@ -143,11 +143,15 @@ snippet enquote "enquote" w
 # emphasize
 snippet	emph "emph" w
 	\\emph{${1:${VISUAL}}}
-# cite
+# citations and references
 #snippet cite "cite" i
 #	~\\cite[$2]{${1:${VISUAL:citation}}}
 snippet cite "cite" i
 	~\\cite{${1:${VISUAL:citation}}}
+snippet ref "ref" i
+	~\\ref{${1:${VISUAL:citation}}}
+snippet label "label" i
+	\\label{${1:${VISUAL:citation}}}
 # todo
 snippet todo "todo comment" w
 	\\todo{${1:${VISUAL:todo}}}
