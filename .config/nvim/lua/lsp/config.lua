@@ -61,6 +61,9 @@ require('clangd_extensions').setup {
 local null_ls = require('null-ls')
 null_ls.setup {
 	sources = {
-		null_ls.builtins.formatting.clang_format, -- formatting using clang_format
+		null_ls.builtins.formatting.clang_format, -- formatting c using clang_format
+		null_ls.builtins.formatting.autopep8.with({ -- formatting python using autopep8
+			"--aggressive", "--aggressive"
+		}),
 	},
 }
