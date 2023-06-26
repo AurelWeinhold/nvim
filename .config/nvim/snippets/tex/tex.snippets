@@ -148,6 +148,8 @@ snippet	emph "emph" w
 #	~\\cite[$2]{${1:${VISUAL:citation}}}
 snippet cite "cite" i
 	~\\cite{${1:${VISUAL:citation}}}
+snippet citeauthor "citeauthor" i
+	\\citeauthor{$1}~\\cite{$1}
 snippet ref "cref" i
 	\\cref{${1:${VISUAL:citation}}}
 snippet label "label" i

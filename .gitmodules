@@ -79,3 +79,6 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/obsidian.nvim"]
 	path = .local/share/nvim/site/pack/functionality/opt/obsidian.nvim
 	url = https://github.com/epwalsh/obsidian.nvim.git
+[submodule ".local/share/nvim/site/pack/functionality/opt/playground"]
+	path = .local/share/nvim/site/pack/functionality/opt/playground
+	url = https://github.com/nvim-treesitter/playground.git
