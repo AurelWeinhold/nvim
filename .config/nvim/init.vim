@@ -38,6 +38,7 @@ lua require('plugins/telescope')
 
 " tree-sitter
 packadd! nvim-treesitter
+packadd! playground
 lua require('plugins/treesitter')
 
 " NOTE(Aurel): This one cmp source is needed in the lsp config as well and needs
