@@ -72,9 +72,13 @@ snippet table "Table environment" b
 		\\centering
 		\\caption{${2:caption}%
 		\\label{tab:${3:label}}}
-		\\begin{${4:t}${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}{${5:c}}
-			$6${5/(?<=.)(c|l|r)|./(?1: & )/g}
-		\\end{$4${4/(t)$|(a)$|(.*)/(?1:abular)(?2:rray)/}}
+		\\begin{tabular}{${5:c}}
+			\toprule
+			$6${5/(?<=.)(c|l|r)|./(?1: & )/g}\\
+			\midrule
+			$6${5/(?<=.)(c|l|r)|./(?1: & )/g}\\
+			\bottomrule
+		\\end{tabular}
 	\\end{table}
 # figure
 snippet fig "Figure environment" b
