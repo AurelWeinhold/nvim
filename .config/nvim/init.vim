@@ -77,7 +77,7 @@ let g:tex_flavor = "latex" " set default tex flavour to latex
 let g:vimtex_compiler_progname = 'nvr'
 
 let g:vimtex_compiler_latexmk = {
-	\ 'build_dir' : 'build',
+	\ 'out_dir' : 'build',
 	\ 'callback' : 1,
 	\ 'continuous' : 1,
 	\ 'executable' : 'latexmk',
