@@ -72,7 +72,6 @@ packadd! nvim-cmp
 lua require('plugins/cmp')
 
 " VimTeX
-packadd! vimtex
 let g:tex_flavor = "latex" " set default tex flavour to latex
 let g:vimtex_compiler_progname = 'nvr'
 
@@ -92,6 +91,7 @@ let g:vimtex_compiler_latexmk = {
 	\ ],
 	\}
 let g:vimtex_context_pdf_viewer='zathura'
+packadd! vimtex
 
 " typst
 packadd! typst.vim
