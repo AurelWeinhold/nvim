@@ -93,6 +93,9 @@ let g:vimtex_compiler_latexmk = {
 	\}
 let g:vimtex_context_pdf_viewer='zathura'
 
+" typst
+packadd! typst.vim
+
 " Goyo
 function! s:goyo_enter()
 	let b:quitting = 0
