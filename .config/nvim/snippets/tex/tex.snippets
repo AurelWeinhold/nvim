@@ -152,10 +152,14 @@ snippet	emph "emph" w
 #	~\\cite[$2]{${1:${VISUAL:citation}}}
 snippet cite "cite" i
 	~\\cite{${1:${VISUAL:citation}}}
-snippet citeauthor "citeauthor" i
+snippet citeauthor "citeauthor" b
 	\\citeauthor{$1}~\\cite{$1}
+snippet urlcite "urlcite" i
+	\\urlcite{${1:${VISUAL:url}}}{${2:`!v strftime("%d")`}}{${3:`!v strftime("%m")`}}
 snippet ref "cref" i
 	\\cref{${1:${VISUAL:citation}}}
+snippet Ref "Cref" i
+	\\Cref{${1:${VISUAL:citation}}}
 snippet label "label" i
 	\\label{${1:${VISUAL:citation}}}
 # todo
