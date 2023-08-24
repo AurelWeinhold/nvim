@@ -23,19 +23,20 @@ This is my personalized neovim configuration.
 
 
 ## Installation
+
 NOTE: I have not tested these steps yet as I already have everything installed.
 This should work though, I'm pretty sure. I will remove this note once I had the
 chance to actually test.
 
 1. Clone this repo
 2. Pull the submodules by running
-   ```
+   ```sh
    git submodule update --init --recursive
    ```
    this will install all plugins but not the dependencies.
 3. In `.local/share/nvim/site/pack/functionality/opt/telescope-fzf-native.nvim/`
    compile `telescope-fzf-native.nvim` by running
-   ```
+   ```sh
    cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release
    cmake --build build --config Release
    cmake --install build --prefix build
@@ -46,13 +47,13 @@ chance to actually test.
 
    You can do this manually or use [stow](https://www.gnu.org/software/stow/)
    using
-   ```
+   ```sh
    stow --target=$HOME nvim
    ```
    from the directory in which you cloned this repo.
 5. Everything should be installed and at the right place now, so open Neovim and
    run
-   ```
+   ```sh
    :helptags ALL
    :mkspell ~/.config/nvim/spell/*.add
    ```
@@ -63,7 +64,17 @@ chance to actually test.
 Before using neovim make sure you have set the environmental variable
 `$XDG_CACHE_HOME`.
 
+## Update
+
+To update submodules run
+
+```sh
+git submodule update --remote
+```
+
+
 ## Colors
+
 - [Gruvbox-Material](https://github.com/sainnhe/gruvbox-material)
 
 Using the original dark color scheme with a hard contrast.
@@ -73,6 +84,7 @@ unified layout in my buffers.
 
 
 ## Plugins
+
 - [cmp](https://github.com/hrsh7th/nvim-cmp.git)
 - completion sources
     - [lsp](https://github.com/hrsh7th/cmp-nvim-lsp.git)
@@ -114,6 +126,7 @@ unified layout in my buffers.
 
 
 ## Mappings
+
 - `<leader>` is mapped to the space key
 - small plugin to strip trailing whitespace on `<leader>x`
 - quicker saving on `<leader>w`
@@ -122,23 +135,30 @@ unified layout in my buffers.
 
 
 ## Noteworthy
+
+
 ### Tree-sitter
+
 [Tree-sitter](https://github.com/tree-sitter/tree-sitter.git) is a parser
 generator tool and an incremental parsing library. It allows you to do anything
 you want with the generated parsing tree, such as enhanced syntax highlighting
 but also refactoring into a function. Go check it out!
 
+
 ### LSP
+
 The [Language Server Protocol (LSP)](https://microsoft.github.io/language-server-protocol/)
 is used for communication between editors and language servers, which may
 provide a lot of functionality like auto complete items, go to definition, find
 all references and more. It's awesome and brings IDE-like code-editing to any
 texteditor supporting the protocol, as Neovim does. Go check it out!
 
+
 ### Snippets
+
 Snippets are small pieces of code that can be inserted using a key combination.
 One might, for example, define a snippet
-```latex
+```tex
 \begin{align*}
     #
 \end{align*}
@@ -152,7 +172,9 @@ a few keystrokes.
 snippets and to more easily remember what capabilities are implemented in your
 setup, but feel free to get inspired by mine.**
 
+
 ### LaTeX
+
 LaTeX writing can be cumbersome. This is my attempt to make it a lot better!
 
 VimTeX is the best plugin to write LaTeX in Vim that I have found to this day.
@@ -184,7 +206,6 @@ snippy`)
 - configure statusline
     - add word count to statusbar in markdown and text documents
 - test installation steps
-- add update steps
 - add LanguageTool support
 	- possibly with yalafi integration to strip away latex
 	- vimtex: vlty
