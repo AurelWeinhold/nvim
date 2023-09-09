@@ -57,9 +57,9 @@ chance to actually test.
    :helptags ALL
    :mkspell ~/.config/nvim/spell/*.add
    ```
-   to generate the helptags (`:help :helptags`) and compile the spell
-   file(`:help :mkspell`). This will enable you to look through the help pages
-   of the plugins make spell suggestions faster.
+   to generate the helptags (`:help :helptags`) and compile the spell file
+   (`:help :mkspell`). This will enable you to look through the help pages of
+   the plugins make spell suggestions faster.
 
 Before using neovim make sure you have set the environmental variable
 `$XDG_CACHE_HOME`.
