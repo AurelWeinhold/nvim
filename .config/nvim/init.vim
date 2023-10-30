@@ -131,6 +131,10 @@ set updatetime=100
 packadd! obsidian.nvim
 lua require('plugins/obsidian')
 
+" qmd files (quarto)
+packadd! otter.nvim
+packadd! quarto-nvim
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL CONFIG
