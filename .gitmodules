@@ -85,9 +85,3 @@
 [submodule ".local/share/nvim/site/pack/functionality/opt/typst.vim"]
 	path = .local/share/nvim/site/pack/functionality/opt/typst.vim
 	url = https://github.com/kaarmu/typst.vim.git
-[submodule ".local/share/nvim/site/pack/functionality/opt/quarto-nvim"]
-	path = .local/share/nvim/site/pack/functionality/opt/quarto-nvim
-	url = https://github.com/quarto-dev/quarto-nvim.git
-[submodule ".local/share/nvim/site/pack/functionality/opt/otter.nvim"]
-	path = .local/share/nvim/site/pack/functionality/opt/otter.nvim
-	url = https://github.com/jmbuhr/otter.nvim
