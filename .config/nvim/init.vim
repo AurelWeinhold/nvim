@@ -94,6 +94,7 @@ let g:vimtex_context_pdf_viewer='zathura'
 packadd! vimtex
 
 " typst
+let g:typst_pdf_viewer = "zathura"
 packadd! typst.vim
 
 " Goyo
