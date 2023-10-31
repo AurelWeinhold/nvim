@@ -48,7 +48,7 @@ chance to actually test.
    You can do this manually or use [stow](https://www.gnu.org/software/stow/)
    using
    ```sh
-   stow --target=$HOME nvim
+   stow --ignore="readme\.md|\.git.*|tags" --target=$HOME .
    ```
    from the directory in which you cloned this repo.
 5. Everything should be installed and at the right place now, so open Neovim and
