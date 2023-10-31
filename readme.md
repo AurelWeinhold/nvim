@@ -66,7 +66,7 @@ Before using neovim make sure you have set the environmental variable
 
 ## Update
 
-To update submodules run
+To update the submodules run
 
 ```sh
 git submodule update --remote
