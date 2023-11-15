@@ -5,3 +5,11 @@ define
 IPv4
 libbpf
 24
+DBA
+nondeterministic
+Büchi
+LTL
+LTS
+CCS
+bisimulation
+Kripke
