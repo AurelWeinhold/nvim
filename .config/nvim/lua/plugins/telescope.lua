@@ -14,6 +14,7 @@ require('telescope').setup{
 				"--follow",
 				"--iglob", "!.git/*",
 				"--iglob", "!.git",
+				"--iglob", "!.venv",
 			},
 		}
 	},
