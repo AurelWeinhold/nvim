@@ -7,3 +7,17 @@ snippet emph "emph" w
 # todo
 snippet todo "todo comment" w
 	#text(red)[{${1:${VISUAL:todo}}]
+#
+snippet set "{}"
+	{${1:${VISUAL}}}
+# inline code
+snippet ic "inline code" w
+	\`${1:${VISUAL}}\`
+# code
+snippet code "code block" b
+	\`\`\`$1
+	${2:${VISUAL}}
+	\`\`\`
+#
+snippet url "url" w
+	#link("${1:url}")[${2:${VISUAL:text}}]
