@@ -128,10 +128,6 @@ let g:goyo_width=85
 " faster updatetime, as default is too slow
 set updatetime=100
 
-" Obsidian
-packadd! obsidian.nvim
-lua require('plugins/obsidian')
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " GENERAL CONFIG
