@@ -21,7 +21,6 @@ packadd! tabular
 packadd! vim-fugitive
 packadd! vim-gutentags
 packadd! vim-signify
-packadd! vimball
 packadd! nvim-web-devicons
 
 " syntax highlighting for new languages
