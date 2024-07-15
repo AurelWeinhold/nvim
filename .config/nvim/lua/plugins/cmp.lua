@@ -4,7 +4,11 @@ local cmp = require('cmp')
 cmp.setup({
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
-		{ name = 'buffer' },
+		{ name = 'buffer', option = {
+			-- https://github.com/hrsh7th/nvim-cmp/issues/453: allow multibyte
+			-- matching, e.g. ä, ö, ü, á, etc.
+			keyword_pattern = [[\k\+]]
+		}},
 		{ name = 'path' },
 		{ name = 'snippy' },
 		{ name = 'omni' },
