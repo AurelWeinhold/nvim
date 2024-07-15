@@ -18,6 +18,46 @@ snippet code "code block" b
 	\`\`\`$1
 	${2:${VISUAL}}
 	\`\`\`
-#
+# url
 snippet url "url" w
 	#link("${1:url}")[${2:${VISUAL:text}}]
+# center
+snippet center "center" b
+	#align(center)[
+		${1:${VISUAL}}
+	]
+# figure
+snippet fig "figure" b
+	#figure(
+		image("${1:img.png}", width: ${2:80%}),
+		caption: [${3:caption}],
+	) <fig:${4:img}>
+# table
+snippet table "table" b
+	#figure(
+		caption: [${8:caption}],
+		table(
+			columns: (${1:auto,auto}),
+			align: horizon,
+			row-gutter: (2.2pt, auto),
+			table.hline(),
+			table.header(
+				[$2], [$3],$4
+			),
+			table.hline(),
+			table.hline(),
+			[$5], [$6],$7
+			table.hline()
+		),
+	) <table:${8:table}>
+# pseudocode
+snippet pseudo "pseudocode" b
+	#figure(
+		kind: "algorithm",
+		supplement: "Algorithm",
+
+		pseudocode-list(numbered-title: [${1:Title}])[
+			${2:{VISUAL:+ do something}
+		]
+		caption: [${3:caption}],
+	) <alg:${4:alg}>
