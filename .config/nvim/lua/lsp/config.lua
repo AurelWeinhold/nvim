@@ -16,17 +16,26 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
   vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-  vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts)
-  vim.keymap.set('n', '<leader>D', vim.lsp.buf.type_definition, bufopts)
-  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<leader>r', vim.lsp.buf.references, bufopts)
+  vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts)
+  vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-  vim.keymap.set('n', '<leader>F', function() vim.lsp.buf.format({
+  vim.keymap.set('n', '<leader>ff', function() vim.lsp.buf.format({
 	  filter = function(client)
 		  return client.name == "null-ls"
 	  end,
 	  async = true,
   }) end, bufopts)
+
+	-- telescope keybindings
+	local telescope_builtin = require('telescope.builtin')
+	vim.keymap.set('n', '<leader>s', telescope_builtin.lsp_workspace_symbols, bufopts)
+	vim.keymap.set('n', '<leader>fs', telescope_builtin.lsp_document_symbols, bufopts)
+	vim.keymap.set('n', '<leader>d', telescope_builtin.diagnostics, bufopts)
+	vim.keymap.set('n', '<leader>fd', telescope_builtin.lsp_definitions, bufopts)
+	vim.keymap.set('n', '<leader>td', telescope_builtin.lsp_type_definitions, bufopts)
+	vim.keymap.set('n', '<leader>fi', telescope_builtin.lsp_implementations, bufopts)
+	vim.keymap.set('n', '<leader>fr', telescope_builtin.lsp_references, bufopts)
 end
 
 -- support LSP snippets
