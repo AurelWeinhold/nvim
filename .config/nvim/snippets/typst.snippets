@@ -115,3 +115,8 @@ snippet _ "_()" i
 #
 snippet frac "frac(1,2)" w
 	frac(${1:${VISUAL:1}}, ${2:2})
+# definition with the lemmify package
+snippet def "definition" b
+	#definition(name: [$1])[
+		${2:${VISUAL}}
+	]
