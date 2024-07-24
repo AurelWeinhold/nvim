@@ -42,7 +42,7 @@ end
 local capabilities = require('cmp_nvim_lsp').default_capabilities();
 
 -- loop over servers, that don't require special configuration
-local servers = { "clangd", "vimls", "texlab", "bashls", "cmake", "tsserver", "pyright"}
+local servers = { "clangd", "vimls", "texlab", "bashls", "cmake", "tsserver", "pyright", "dartls"}
 for _, lsp in ipairs(servers) do
 	nvim_lsp[lsp].setup {
 		on_attach = on_attach,
