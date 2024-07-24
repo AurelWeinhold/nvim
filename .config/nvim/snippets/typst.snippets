@@ -10,16 +10,33 @@ snippet todo "todo comment" w
 #
 snippet set "{}"
 	{${1:${VISUAL}}}
+# monospace
+snippet mono "incline monospace" w
+	\`${1:${VISUAL}}\`
 # inline code
 snippet ic "inline code" w
-	\`${1:${VISUAL}}\`
+	\`\`\`${1:c} ${2:${VISUAL}}\`\`\`
 # code
 snippet code "code block" b
-	\`\`\`$1
+	#sourcecode[\`\`\`${1:c}
 	${2:${VISUAL}}
 	\`\`\`
+# pseudocode
+snippet pseudo "pseudocode" b
+	#figure(
+		kind: "algorithm",
+		supplement: "Algorithm",
+
+		pseudocode-list(numbered-title: [${1:Title}])[
+			${2:{VISUAL:+ do something}
+		]
+		caption: [${3:caption}],
+	) <alg:${4:alg}>
+	\`\`\`]
 # url
 snippet url "url" w
+	#link("${1:url}")[${2:${VISUAL:text}}]
+snippet link "url" w
 	#link("${1:url}")[${2:${VISUAL:text}}]
 # center
 snippet center "center" b
@@ -32,28 +49,69 @@ snippet fig "figure" b
 		image("${1:img.png}", width: ${2:80%}),
 		caption: [${3:caption}],
 	) <fig:${4:img}>
-# table
+#
+snippet fig "figure" b
+	#figure(
+		${1:${VISUAL:content}},
+		caption: [${2:caption}],
+	) <$3:${4:label}>
+# table: possibly used inside figure
 snippet table "table" b
-	#figure(
-		caption: [${8:caption}],
-		table(
-			columns: (${1:auto,auto}),
-			align: horizon,
-			row-gutter: (2.2pt, auto),
-			table.header(
-				[$2], [$3],$4
-			),
-			[$5], [$6],$7
+	table(
+		columns: (${1:auto,auto}),
+		align: center + horizon,
+		row-gutter: (2.2pt, auto),
+		table.header(
+			[$2], [$3],$4
 		),
-	) <table:${8:table}>
+		[$5], [$6],$7
+	),
+# image: possibly used inside figure
+snippet img "image" b
+	image("img/${1:uri}", width: ${2:80%}),
+#
+snippet label "label" i
+	<$1>
 # pseudocode
-snippet pseudo "pseudocode" b
+snippet pseudo "pseudocode algorithm as a figure" b
 	#figure(
-		kind: "algorithm",
-		supplement: "Algorithm",
+	  kind: "algorithm",
+	  supplement: [Algorithm],
 
-		pseudocode-list(numbered-title: [${1:Title}])[
-			${2:{VISUAL:+ do something}
-		]
-		caption: [${3:caption}],
-	) <alg:${4:alg}>
+	  pseudocode-list(numbered-name: [$1])[
+		+ $2
+	  ]
+	) <alg:$3>
+#
+snippet grid "grid" b
+	#grid(columns: (${1:1fr,1fr}), gutter: ${2:1em},
+	[
+		${3:${VISUAL}}
+	],
+	[
+		$4
+	],)
+#
+snippet | "mid(|)" w
+	mid(|)
+#
+snippet mid "mid(|)" w
+	mid(|)
+#
+snippet acr "acronym" w
+	#acr("${1:${VISUAL}}")
+#
+snippet acrpl "plural acronym" w
+	#acrpl("${1:${VISUAL}}")
+# * becomes dot
+snippet * "* to dot" i
+	dot
+#
+snippet ^ "^()" i
+	^($1)
+#
+snippet _ "_()" i
+	_($1)
+#
+snippet frac "frac(1,2)" w
+	frac(${1:${VISUAL:1}}, ${2:2})
