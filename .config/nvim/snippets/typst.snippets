@@ -46,12 +46,6 @@ snippet center "center" b
 # figure
 snippet fig "figure" b
 	#figure(
-		image("${1:img.png}", width: ${2:80%}),
-		caption: [${3:caption}],
-	) <fig:${4:img}>
-#
-snippet fig "figure" b
-	#figure(
 		${1:${VISUAL:content}},
 		caption: [${2:caption}],
 	) <$3:${4:label}>
