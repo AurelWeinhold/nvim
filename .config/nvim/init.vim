@@ -93,7 +93,7 @@ let g:vimtex_context_pdf_viewer='zathura'
 packadd! vimtex
 
 " typst
-let g:typst_embedded_languages = ["c", "bash", "sh"]
+let g:typst_embedded_languages = ["c", "bash", "sh", "rust"]
 let g:typst_pdf_viewer = "zathura"
 packadd! typst.vim
 
