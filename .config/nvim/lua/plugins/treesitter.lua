@@ -5,7 +5,6 @@ require('nvim-treesitter.configs').setup {
 		-- for obsidian only:
 		additional_vim_regex_highlighting = {"markdown"},
 	},
-	indent = { enable = true },
 	incremental_selection = { enable = true },
 	keymaps = {
 		init_selection = "gnn",
