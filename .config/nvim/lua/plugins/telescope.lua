@@ -38,5 +38,6 @@ vim.keymap.set('n', '<leader>t', builtin.tags, {})
 vim.keymap.set('n', '<leader>ft', builtin.current_buffer_tags, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+vim.keymap.set('n', '<leader>gh', builtin.git_bcommits, {})
 -- replace default z= with a telescope picker
 vim.keymap.set('n', 'z=', builtin.spell_suggest, {})
