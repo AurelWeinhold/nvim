@@ -19,63 +19,6 @@ let g:loaded_ruby_provider = 0
 " Hit '%' on 'if' to jump to 'else'
 runtime macros/matchit.vim
 
-" libraries
-packadd! plenary.nvim
-
-packadd! goyo.vim
-packadd! tabular
-packadd! vim-fugitive
-packadd! vim-gutentags
-packadd! vim-signify
-packadd! nvim-web-devicons
-
-" syntax highlighting for new languages
-packadd! yuck.vim
-
-" Lualine
-packadd! lualine.nvim
-lua require('plugins/lualine')
-
-" telescope
-packadd! telescope.nvim
-packadd! telescope-fzf-native.nvim
-lua require('plugins/telescope')
-
-" tree-sitter
-packadd! nvim-treesitter
-packadd! playground
-lua require('plugins/treesitter')
-
-" NOTE(Aurel): This one cmp source is needed in the lsp config as well and needs
-" to be loaded beforehand!
-packadd! cmp-nvim-lsp
-
-" LSP
-packadd! nvim-lspconfig
-packadd! null-ls.nvim
-packadd! lspkind-nvim
-packadd! clangd_extensions.nvim
-lua require('lsp/config')
-
-" jdtls (java)
-packadd! nvim-jdtls
-augroup jdtls_lsp
-	autocmd!
-	autocmd FileType java lua require('lsp/servers/jdtls').setup()
-augroup end
-
-" snippy
-packadd! nvim-snippy
-lua require('plugins/snippy')
-
-" cmp
-packadd! cmp-omni
-packadd! cmp-snippy
-packadd! cmp-buffer
-packadd! cmp-path
-packadd! nvim-cmp
-lua require('plugins/cmp')
-
 " VimTeX
 let g:tex_flavor = "latex" " set default tex flavour to latex
 let g:vimtex_compiler_progname = 'nvr'
@@ -96,12 +39,12 @@ let g:vimtex_compiler_latexmk = {
 	\ ],
 	\}
 let g:vimtex_context_pdf_viewer='zathura'
-packadd! vimtex
 
 " typst
 let g:typst_embedded_languages = ["c", "bash", "sh", "rust"]
 let g:typst_pdf_viewer = "zathura"
-packadd! typst.vim
+
+lua require("config.lazy")
 
 " Goyo
 function! s:goyo_enter()
@@ -287,7 +230,6 @@ syntax on
 if has('termguicolors')
 	set termguicolors
 endif
-packadd! gruvbox-material
 set background=dark
 let g:gruvbox_material_italic=1
 let g:gruvbox_material_background="hard"
