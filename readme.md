@@ -19,7 +19,8 @@ This is my personalized neovim configuration.
       for typescript
     - [vimls](https://github.com/iamcco/vim-language-server) for VimL
 - [Neovim](https://neovim.io/) (>0.5)
-- [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars
+- [tree-sitter](https://github.com/tree-sitter/tree-sitter.git) + grammars +
+  tree-sitter-cli
 
 
 ## Installation
