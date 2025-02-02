@@ -1,4 +1,10 @@
 local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'harper_ls' }
+local formatters = { 'stylua', 'ruff', 'clang-format' }
+
+local ensure_installed = {
+	unpack(servers),
+	unpack(formatters)
+}
 
 local lsp_conf = function()
 	local nvim_lsp = require('lspconfig')
@@ -62,6 +68,19 @@ local lsp_conf = function()
 
 end
 
+-- <leader>ff to format
+vim.keymap.set('n', '<leader>ff', ':Format<CR>', { noremap=true, silent=true })
+local formatter_conf = function()
+	-- formatter.nvim
+
+	require('formatter').setup {
+		filetype = {
+			lua = { require('formatter.filetypes.lua').stylua },
+			python = { require('formatter.filetypes.python').ruff },
+			c = { require('formatter.filetypes.c').clangformat },
+		}
+	}
+end
 
 
 return {
@@ -95,7 +114,7 @@ return {
 		},
 		config = function ()
 			require('mason-tool-installer').setup {
-				ensure_installed = servers,
+				ensure_installed = ensure_installed,
 			}
 		end
 	},
@@ -110,6 +129,10 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = lsp_conf,
+	},
+	{
+		'mhartington/formatter.nvim',
+		config = formatter_conf,
 	},
 	{
 		"mfussenegger/nvim-jdtls",
