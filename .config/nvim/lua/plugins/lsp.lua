@@ -99,9 +99,21 @@ return {
 		},
 		config = function()
 			require('mason-lspconfig').setup {
-				ensure_installed = servers,
+				ensure_installed = {},
 				-- only install servers specified in `servers`
 				automatic_installation = false,
+			}
+		end
+	},
+	{
+		'WhoIsSethDaniel/mason-tool-installer.nvim',
+		priority = 70,
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
+		config = function ()
+			require('mason-tool-installer').setup {
+				ensure_installed = servers,
 			}
 		end
 	},
