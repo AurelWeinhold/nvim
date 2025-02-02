@@ -21,12 +21,6 @@ local lsp_conf = function()
 		vim.keymap.set('n', '<leader>k', vim.lsp.buf.signature_help, bufopts)
 		vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
 		vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
-		vim.keymap.set('n', '<leader>ff', function() vim.lsp.buf.format({
-			filter = function(client)
-				return client.name == "null-ls"
-			end,
-			async = true,
-		}) end, bufopts)
 
 		-- telescope keybindings
 		local telescope_builtin = require('telescope.builtin')
@@ -68,18 +62,6 @@ local lsp_conf = function()
 
 end
 
-null_conf = function()
-	-- null-ls
-	local null_ls = require('null-ls')
-	null_ls.setup {
-		sources = {
-			null_ls.builtins.formatting.clang_format, -- formatting c using clang_format
-			null_ls.builtins.formatting.autopep8.with({ -- formatting python using autopep8
-				"--aggressive", "--aggressive"
-			}),
-		},
-	}
-end
 
 
 return {
@@ -128,13 +110,6 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = lsp_conf,
-	},
-	{
-		"jose-elias-alvarez/null-ls.nvim",
-		dependencies = {
-			"hrsh7th/cmp-nvim-lsp",
-		},
-		config = null_conf,
 	},
 	{
 		"mfussenegger/nvim-jdtls",
