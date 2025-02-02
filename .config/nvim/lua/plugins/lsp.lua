@@ -127,5 +127,10 @@ return {
 	{
 		"mfussenegger/nvim-jdtls",
 		ft = "java"
-	}
+	},
+	{
+		"folke/lazydev.nvim",
+		opts = {},
+		ft='lua',
+	},
 }
