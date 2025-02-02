@@ -14,10 +14,10 @@ snippet #if "#if ... #endif" b
 #
 snippet guard "create header guards" b
 	#ifndef ${1:HEADER}_H
+	#define $1_H
 
 	$2
 	
-	#define $1_H
 	#endif /* ifndef $1_H */
 #
 snippet incl "include a library" b
