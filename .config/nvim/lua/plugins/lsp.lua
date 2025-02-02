@@ -86,12 +86,34 @@ end
 
 return {
 	{
+		-- mason: for easily installing language servers etc.
+		"williamboman/mason.nvim",
+		priority = 90,
+		config = function()
+			require('mason').setup()
+		end
+	},
+	{
+		"williamboman/mason-lspconfig.nvim",
+		priority = 70,
+		dependencies = {
+			"williamboman/mason.nvim",
+		},
+		config = function()
+			require('mason-lspconfig').setup {
+				ensure_installed = servers,
+			}
+		end
+	},
+	{
 		"neovim/nvim-lspconfig",
 		priority = 50,
 		dependencies = {
 			"hrsh7th/cmp-nvim-lsp",
 			"onsails/lspkind.nvim",
 			"p00f/clangd_extensions.nvim",
+			"williamboman/mason.nvim",
+			"williamboman/mason-lspconfig.nvim",
 		},
 		config = lsp_conf,
 	},
