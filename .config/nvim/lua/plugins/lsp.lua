@@ -1,4 +1,4 @@
-local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "cmake", "ts_ls", "pyright", 'harper_ls' }
+local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'harper_ls' }
 
 local lsp_conf = function()
 	local nvim_lsp = require('lspconfig')
