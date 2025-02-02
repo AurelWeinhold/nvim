@@ -1,9 +1,11 @@
 local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'harper_ls' }
 local formatters = { 'stylua', 'ruff', 'clang-format' }
+local linters = { 'shellcheck' }
 
 local ensure_installed = {
 	unpack(servers),
-	unpack(formatters)
+	unpack(formatters),
+	unpack(linters),
 }
 
 local lsp_conf = function()
@@ -82,6 +84,19 @@ local formatter_conf = function()
 	}
 end
 
+vim.api.nvim_create_autocmd({ 'BufWritePost' }, {
+	callback = function ()
+		require('lint').try_lint()
+	end,
+})
+local lint_conf = function()
+	require('lint').linters_by_ft = {
+		sh = { 'shellcheck' },
+		bash = { 'shellcheck' },
+		zsh = { 'shellcheck' },
+	}
+end
+
 
 return {
 	{
@@ -133,6 +148,10 @@ return {
 	{
 		'mhartington/formatter.nvim',
 		config = formatter_conf,
+	},
+	{
+		'mfussenegger/nvim-lint',
+		config = lint_conf,
 	},
 	{
 		"mfussenegger/nvim-jdtls",
