@@ -1,4 +1,6 @@
-lsp_conf = function()
+local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "cmake", "ts_ls", "pyright", 'harper_ls' }
+
+local lsp_conf = function()
 	local nvim_lsp = require('lspconfig')
 
 	local opts = { noremap=true, silent=true }
@@ -43,7 +45,6 @@ lsp_conf = function()
 	local capabilities = require('cmp_nvim_lsp').default_capabilities();
 
 	-- loop over servers, that don't require special configuration
-	local servers = { "clangd", "vimls", "texlab", "bashls", "cmake", "ts_ls", "pyright", "dartls"}
 	for _, lsp in ipairs(servers) do
 		nvim_lsp[lsp].setup {
 			on_attach = on_attach,
