@@ -102,6 +102,8 @@ return {
 		config = function()
 			require('mason-lspconfig').setup {
 				ensure_installed = servers,
+				-- only install servers specified in `servers`
+				automatic_installation = false,
 			}
 		end
 	},
