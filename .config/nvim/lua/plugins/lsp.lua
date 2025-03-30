@@ -82,6 +82,11 @@ local formatter_conf = function()
 			python = { require('formatter.filetypes.python').ruff },
 			c = { require('formatter.filetypes.c').clangformat },
 			cpp = { require('formatter.filetypes.c').clangformat },
+		},
+
+		-- any filetype
+		["*"] = {
+			require("formatter.filetypes.any").remove_trailing_whitespace,
 		}
 	}
 end
