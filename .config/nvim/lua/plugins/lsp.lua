@@ -81,6 +81,7 @@ local formatter_conf = function()
 			lua = { require('formatter.filetypes.lua').stylua },
 			python = { require('formatter.filetypes.python').ruff },
 			c = { require('formatter.filetypes.c').clangformat },
+			cpp = { require('formatter.filetypes.c').clangformat },
 		}
 	}
 end
