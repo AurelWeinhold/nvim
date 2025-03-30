@@ -72,6 +72,7 @@ end
 
 -- <leader>ff to format
 vim.keymap.set('n', '<leader>ff', ':Format<CR>', { noremap=true, silent=true })
+vim.keymap.set('v', '<leader>ff', ':Format<CR>', { noremap=true, silent=true })
 local formatter_conf = function()
 	-- formatter.nvim
 
