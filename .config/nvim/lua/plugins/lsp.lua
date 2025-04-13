@@ -1,5 +1,8 @@
-local servers = { "clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'harper_ls' }
-local formatters = { 'stylua', 'ruff', 'clang-format' }
+local servers = {
+	"clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'harper_ls',
+	'rust_analyzer'
+}
+local formatters = { 'stylua', 'ruff', 'clang-format', 'rustfmt' }
 local linters = { 'shellcheck' }
 
 local ensure_installed = {
@@ -82,6 +85,7 @@ local formatter_conf = function()
 			python = { require('formatter.filetypes.python').ruff },
 			c = { require('formatter.filetypes.c').clangformat },
 			cpp = { require('formatter.filetypes.c').clangformat },
+			rust = { require('formatter.filetypes.rust').rustfmt },
 		},
 
 		-- any filetype
