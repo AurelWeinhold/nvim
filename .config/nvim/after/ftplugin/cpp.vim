@@ -19,7 +19,7 @@ nnoremap <buffer> <leader>n :cnext<CR>
 setlocal number
 
 " add functionality to debug using gdb in the terminal
-packadd termdebug
+packadd! termdebug
 
 " spell checking in c.doxygen source files is only done in comments
 setlocal spell
