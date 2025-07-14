@@ -219,3 +219,4 @@ snippy`)
 - replace vimtex with LSP?
 - add (LSP) mappings to readme
 - check out `:h fo-table`
+- Use neovim 0.10 builtin snippets
