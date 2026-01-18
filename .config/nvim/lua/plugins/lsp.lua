@@ -11,8 +11,6 @@ local ensure_installed = {
 }
 
 local lsp_conf = function()
-	local nvim_lsp = require('lspconfig')
-
 	local opts = { noremap=true, silent=true }
 	vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
 	vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
@@ -48,10 +46,10 @@ local lsp_conf = function()
 
 	-- loop over servers, that don't require special configuration
 	for _, lsp in ipairs(servers) do
-		nvim_lsp[lsp].setup {
+		vim.lsp.config(lsp, {
 			on_attach = on_attach,
 			capabilities = capabilities,
-		}
+		})
 	end
 
 	require('clangd_extensions').setup {
