@@ -82,6 +82,8 @@ local formatter_conf = function()
 			c = { require('formatter.filetypes.c').clangformat },
 			cpp = { require('formatter.filetypes.c').clangformat },
 			rust = { require('formatter.filetypes.rust').rustfmt },
+			svelte = { require('formatter.filetypes.svelte').prettier },
+			ts = { require('formatter.filetypes.typescript').prettier },
 		},
 
 		-- any filetype
