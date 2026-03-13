@@ -16,7 +16,7 @@ local lsp_conf = function()
 	vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, opts)
 	vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, opts)
 
-	local on_attach = function(client, bufnr)
+	local on_attach = function(_, bufnr)
 
 		-- Mappings
 		local bufopts = { noremap=true, silent=true, buffer=bufnr }
