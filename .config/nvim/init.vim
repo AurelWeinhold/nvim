@@ -216,9 +216,6 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
-" vertical splitting with same file
-nnoremap <silent> <leader>v :vsplit<CR>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " COLORS / FONTS
