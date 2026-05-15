@@ -1,6 +1,9 @@
 return {
 	"nvim-lualine/lualine.nvim",
-	requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+	requires = {
+		{ 'nvim-tree/nvim-web-devicons', opt = true },
+		{ 'nvim-navic' }
+	},
 	config = function()
 
 		require('lualine').setup {
@@ -15,7 +18,8 @@ return {
 			},
 			tabline = {
 				lualine_b = { { 'tabs', mode = 1 } },
-				lualine_x = { 'branch' },
+				lualine_x = { 'navic' },
+				lualine_y = { 'branch' },
 			},
 		}
 
