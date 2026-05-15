@@ -1,3 +1,24 @@
+-- focus on the preview window to search/copy in there
+-- https://github.com/nvim-telescope/telescope.nvim/issues/2778#issuecomment-2202572413
+local function focus_preview(prompt_bufnr)
+	local action_state = require("telescope.actions.state")
+	local picker = action_state.get_current_picker(prompt_bufnr)
+	local prompt_win = picker.prompt_win
+	local previewer = picker.previewer
+	local bufnr = previewer.state.bufnr or previewer.state.termopen_bufnr
+	local winid = previewer.state.winid or vim.fn.win_findbuf(bufnr)[1]
+
+	-- keymap for switching back
+	vim.keymap.set("n", "<C-l>", function()
+		vim.cmd(string.format("noautocmd lua vim.api.nvim_set_current_win(%s)", prompt_win))
+	end, { buffer = bufnr })
+	vim.keymap.set("n", "<C-h>", function()
+		vim.cmd(string.format("noautocmd lua vim.api.nvim_set_current_win(%s)", prompt_win))
+	end, { buffer = bufnr })
+	vim.cmd(string.format("noautocmd lua vim.api.nvim_set_current_win(%s)", winid))
+	-- api.nvim_set_current_win(winid)
+end
+
 return {
 	"nvim-telescope/telescope.nvim",
 	dependencies = {
@@ -13,8 +34,10 @@ return {
 			defaults = {
 				mappings = {
 					i = {
-						["<esc>"] = require("telescope.actions").close
-					}
+						["<esc>"] = require("telescope.actions").close,
+						["<C-h>"] = focus_preview,
+						["<C-l>"] = focus_preview,
+					},
 				},
 			},
 			pickers = {
@@ -53,5 +76,5 @@ return {
 		-- replace default z= with a telescope picker
 		vim.keymap.set('n', 'z=', builtin.spell_suggest, {})
 
-	end, 
+	end,
 }
