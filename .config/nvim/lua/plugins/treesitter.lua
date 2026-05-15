@@ -1,5 +1,5 @@
-conf = function()
-	require('nvim-treesitter.configs').setup {
+local conf = function()
+	require('nvim-treesitter').setup {
 		ensure_installed = { "c", "cpp", "latex", "java", "markdown", "python" },
 		highlight = {
 			enable = true,
@@ -20,12 +20,6 @@ conf = function()
 			lint_events = {"BufWrite", "CursorHold"},
 		},
 	}
-
-	-- parsers
-	local parser_config = require('nvim-treesitter.parsers').get_parser_configs()
-	parser_config.c.filetype_to_parsername = "c.doxygen"
-	parser_config.latex.filetype_to_parsername = "latex"
-
 end
 
 return {
