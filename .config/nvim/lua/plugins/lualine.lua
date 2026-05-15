@@ -10,8 +10,13 @@ return {
 				component_separators = ''
 			},
 			sections = {
-				lualine_c = { {'filename', path = 1} }
-			}
+				lualine_b = { {'filename', path = 1}, 'diff' },
+				lualine_c = { 'diagnostics' }
+			},
+			tabline = {
+				lualine_b = { { 'tabs', mode = 1 } },
+				lualine_x = { 'branch' },
+			},
 		}
 
 	end
