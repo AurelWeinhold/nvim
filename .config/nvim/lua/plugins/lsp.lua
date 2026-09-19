@@ -1,9 +1,9 @@
 local servers = {
 	"clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'rust_analyzer',
-	"ts_ls", "svelte"
+	"ts_ls", "svelte", "jinja_lsp"
 }
 local formatters = { 'stylua', 'ruff', 'clang-format', 'rustfmt', 'prettier' }
-local linters = { 'shellcheck' }
+local linters = { 'shellcheck', 'djlint' }
 
 local ensure_installed = {
 	unpack(servers),
