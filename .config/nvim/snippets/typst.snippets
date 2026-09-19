@@ -70,16 +70,6 @@ snippet img "image" b
 #
 snippet label "label" i
 	<$1>
-# pseudocode
-snippet pseudo "pseudocode algorithm as a figure" b
-	#figure(
-	  kind: "algorithm",
-	  supplement: [Algorithm],
-
-	  pseudocode-list(numbered-name: [$1])[
-		+ $2
-	  ]
-	) <alg:$3>
 #
 snippet grid "grid" b
 	#grid(columns: (${1:1fr,1fr}), gutter: ${2:1em},
