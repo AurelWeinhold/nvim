@@ -25,6 +25,6 @@ end
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	laze = false,
+	lazy = false,
 	config = conf
 }
