@@ -1,6 +1,4 @@
-conf = function()
-	local snippy = require('snippy')
-
+local conf = function()
 	require('snippy').setup({
 		mappings = {
 			is = {
