@@ -213,11 +213,18 @@ vnoremap <C-c> "+y
 
 nnoremap <silent> <leader>e :Ex<CR>
 
-" faster moving between splits
+" faster moving between windows
 nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
+" also for terminal windows
+tnoremap <C-h> <C-\><C-N><C-W>h
+tnoremap <C-j> <C-\><C-N><C-W>j
+tnoremap <C-k> <C-\><C-N><C-W>k
+tnoremap <C-l> <C-\><C-N><C-W>l
+
+tnoremap <Esc> <C-\><C-n>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
