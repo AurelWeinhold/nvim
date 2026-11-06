@@ -1,6 +1,7 @@
 return {
 	"junegunn/goyo.vim",
 	"godlygeek/tabular",
+	"tpope/vim-abolish",
 	"tpope/vim-fugitive",
 	"ludovicchabant/vim-gutentags",
 	"mhinz/vim-signify",
