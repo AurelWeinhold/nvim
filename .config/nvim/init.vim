@@ -19,6 +19,9 @@ let g:loaded_ruby_provider = 0
 " Hit '%' on 'if' to jump to 'else'
 runtime macros/matchit.vim
 
+" load undotree built-in plugin
+packadd nvim.undotree
+
 " VimTeX
 let g:tex_flavor = "latex" " set default tex flavour to latex
 let g:vimtex_compiler_progname = 'nvr'
