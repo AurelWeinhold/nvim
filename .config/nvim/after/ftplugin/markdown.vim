@@ -2,7 +2,7 @@
 setlocal nonumber norelativenumber
 
 " conceal
-setlocal conceallevel=2
+setlocal conceallevel=0
 
 " when on a line, stop concealing that line
 setlocal concealcursor="nc"
