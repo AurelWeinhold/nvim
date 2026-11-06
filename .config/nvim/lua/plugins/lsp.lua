@@ -1,6 +1,6 @@
 local servers = {
 	"clangd", "vimls", "lua_ls", "texlab", "bashls", "pyright", 'rust_analyzer',
-	"ts_ls", "svelte", "jinja_lsp"
+	"ts_ls", "svelte", "jinja_lsp", "yamlls"
 }
 local formatters = { 'stylua', 'ruff', 'clang-format', 'rustfmt', 'prettier' }
 local linters = { 'shellcheck', 'djlint' }
